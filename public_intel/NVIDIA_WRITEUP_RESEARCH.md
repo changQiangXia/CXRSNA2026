@@ -7,7 +7,7 @@ value. Popularity (votes/comments) is not treated as performance.
 
 ## Research question
 
-Our final result was `0.959 public / 0.945 private`. The high-score public
+The author's final result was `0.959 public / 0.945 private`. The high-score public
 write-ups reached roughly `0.965–0.970 public` and `0.954–0.960 private`.
 What did those teams do that is both technically and operationally different
 from a large ensemble of public models?
@@ -98,7 +98,7 @@ Several independent write-ups report that flexible weights did not transfer:
 - 49th place: public probe reads were more useful than a tiny gold panel for
   per-finding decisions.
 
-This aligns with our own ledger: per-target rank residuals and low-dose
+This aligns with the author's own ledger: per-target rank residuals and low-dose
 corrections were useful; learned stackers, isotonic calibration, and flexible
 co-occurrence gates repeatedly failed.
 
@@ -113,7 +113,7 @@ The best write-ups treat runtime as part of the solution:
 - FP16, chunking, TensorRT, or C++ readers where justified;
 - candidate selection based on whether it fits the nine-hour hidden rerun.
 
-Our endgame confirmed this directly: a candidate can look strong locally and
+The author's endgame confirmed this directly: a candidate can look strong locally and
 still receive no score after a timeout. A fallback submission is not optional.
 
 ### 6. Distillation can buy both score and runtime
@@ -144,7 +144,7 @@ a second OOF self-distillation round gave a smaller but useful gain.
 - [33rd place — no external data](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/751962)
 - [235th place — report/image labels](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/751888)
 
-## What we should copy next time
+## What the author should copy next time
 
 ### Priority 1: build an image-aware label factory
 

@@ -53,7 +53,7 @@ ACL、MCL、内侧半月板、外侧半月板、
 所有高分公开方案都指向同一个结论：**标签和 anatomy-aware inputs 的收益，
 远大于盲目更换时髦模型。**
 
-## 我们的爬升路径
+## 本人的爬升路径
 
 ```text
 0.943  早期公开 stack
@@ -71,9 +71,9 @@ ACL、MCL、内侧半月板、外侧半月板、
 终盘停在 `0.959 public / 0.945 private`。最关键的后处理增量是 A5 Effusion
 residual `.30`；更高剂量、更多目标列或更大的 residual bundle 都无法稳定迁移。
 
-## 我们的创新 tricks
+## 本人的创新 tricks
 
-我们的主要创新不在“重新发明 backbone”，而在于把 12 列 AUC 当成 12 个独立排序问题，
+本人的主要创新不在“重新发明 backbone”，而在于把 12 列 AUC 当成 12 个独立排序问题，
 在 rank space 做可审计、可回退的小手术。
 
 - **单列 A5 residual**：不把弱 A5 模型整模替换强宿主，只对 Effusion 注入固定 `.30`
@@ -91,7 +91,7 @@ residual `.30`；更高剂量、更多目标列或更大的 residual bundle 都�
 - **固定证据门，不做公榜微调**：dose、gate 和 blend 权重在看 hidden score 前固定；
   58 例 gold 面板、870 proxy、5 folds 和真实线上回执分别承担不同证据等级。
 
-这些 tricks 的共同点是：改动小、机制清楚、失败可逆。公开强模型提供了载具，我们的
+这些 tricks 的共同点是：改动小、机制清楚、失败可逆。公开强模型提供了载具，本人的
 贡献主要是选择“哪一列、哪一小段排序值得动”。
 
 ## 最终 scoring wave
@@ -140,12 +140,12 @@ residual `.30`；更高剂量、更多目标列或更大的 residual bundle 都�
 
 ## 复现与私有资产
 
-notebook 会引用公开 Kaggle 数据集和少量我的私有 artifact；这些 artifact
+notebook 会引用公开 Kaggle 数据集和少量本人的私有 artifact；这些 artifact
 不会在本仓库中重新分发。复现者必须自行准备合法获得的比赛数据、公开权重和
 有权限使用的私有资产。
 
 本次比赛是 **solo 赛**；文中提到其他 team 的地方，均是在引用公开强者的
-外部方案，不代表我方有团队合并。
+外部方案，不代表本人有团队合并。
 
 本次 notebook 实际引用的私有 Kaggle datasets 及链接见
 [`docs/PRIVATE_ASSETS.md`](docs/PRIVATE_ASSETS.md)。
@@ -210,7 +210,7 @@ The central problem was not “train one larger model.” It was:
 The strongest public solutions all converged on the same conclusion: **labels
 and anatomy-aware inputs produced more gain than fashionable model changes**.
 
-## Our path
+## The author's path
 
 The solo entry started from the public code ecosystem and improved in short,
 evidence-gated steps:
@@ -223,7 +223,7 @@ evidence-gated steps:
 0.951  stronger public checkpoint family
 0.954  laddered family
 0.956  improved public composition
-0.957  our own R-slot checkpoint + compact-model fusion
+0.957  the author's R-slot checkpoint + compact-model fusion
 0.958  rank-band and per-finding routing
 0.959  newtable anchor + A5 Effusion residual
 ```
@@ -232,18 +232,18 @@ The final wave stayed at `0.959 public / 0.945 private`. The most useful
 late-game change was the A5 Effusion residual at dose `0.30`; larger or broader
 residual bundles repeatedly failed local or hidden checks.
 
-## Our innovation tricks
+## The author's innovation tricks
 
-Our main contribution was not a new backbone. We treated the 12 AUC columns as
+The author's main contribution was not a new backbone. The author treated the 12 AUC columns as
 12 independent ranking problems and made small, auditable rank-space changes
 with reversible fallbacks.
 
 - **Single-column A5 residual:** instead of replacing a strong host with a weak
-  A5 model, we injected a fixed `.30` rank residual only on Effusion. The A5
+  A5 model, the author injected a fixed `.30` rank residual only on Effusion. The A5
   reader is weak alone but partially decorrelated from the host, so a small
   correction can repair host ranking mistakes.
 - **Per-finding post-processing instead of global calibration:** AUC is
-  invariant to probability calibration, so we used per-finding rank residuals,
+  invariant to probability calibration, so the author used per-finding rank residuals,
   reader weights and fixed doses. We rejected isotonic calibration, probability
   offsets and learned cross-label stackers.
 - **Rank-band and consensus routing:** changes were restricted to the middle
@@ -265,7 +265,7 @@ with reversible fallbacks.
   evidence roles.
 
 The common principle was: small change, explicit mechanism, reversible
-failure. Public strong models supplied the vehicle; our contribution was
+failure. Public strong models supplied the vehicle; the author's contribution was
 choosing which column and which small part of the ranking deserved surgery.
 
 ## Final scoring wave
@@ -329,7 +329,7 @@ See [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md) for attribution and
 [`NOTICE.md`](NOTICE.md) for the archive’s legal and sharing boundary.
 
 This was a solo competition. References to other teams in the public-intel
-section describe external write-ups, not a team merge on our side.
+section describe external write-ups, not a team merge on the author's side.
 
 The private Kaggle datasets referenced by the archived notebooks, with direct
 links, are listed in [`docs/PRIVATE_ASSETS.md`](docs/PRIVATE_ASSETS.md).

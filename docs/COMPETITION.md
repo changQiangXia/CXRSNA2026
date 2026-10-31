@@ -59,9 +59,9 @@ The competition closed with approximately:
 public #1                 0.970
 private #1                0.960
 private gold boundary     about 0.955
-our public               0.959
-our private              0.945
-our public rank           182
+author public            0.959
+author private           0.945
+author public rank        182
 ```
 
 The board displays only three decimals; the underlying ordering is finer.
@@ -82,7 +82,7 @@ The board displays only three decimals; the underlying ordering is finer.
 ## Evidence hierarchy used by this archive
 
 ```text
-A   our own hidden leaderboard result
+A   the author's hidden leaderboard result
 A'  another competitor's hidden leaderboard result
 B   local gold58 / multi-fold proxy / paired bootstrap
 C   mechanism-only hypothesis
