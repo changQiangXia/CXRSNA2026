@@ -94,6 +94,27 @@ residual `.30`；更高剂量、更多目标列或更大的 residual bundle 都�
 这些 tricks 的共同点是：改动小、机制清楚、失败可逆。公开强模型提供了载具，核心
 贡献主要是选择“哪一列、哪一小段排序值得动”。
 
+## 经验教训与收获
+
+- **监督质量决定上限。** 公开区顶尖方案反复从报告和图像中构造连续软标签；
+  58 例专家标签适合做定义校准和回归检查，难以承担细粒度权重搜索。
+- **解剖信息值得优先投入。** 物理几何、左右侧归一化、膝中心裁剪、骨性 landmark、
+  compartment crop、ROI/lesion supervision 反复出现，并且比更换一个小 backbone
+  更接近分数瓶颈。
+- **多样性需要有真实误差差异。** 同架构、同标签、同输入的 checkpoint 往往高度相关；
+  不同视图、不同标签配方、不同解剖区域和不同模型家族更容易提供互补信号。
+- **验证体系要分层。** gold58 用作低噪声过滤器，870 弱标签面用于大规模方向判断，
+  scanner/site grouped folds 用于检查站点捷径，最终以 hidden LB 回执校准方向。
+- **AUC 后处理优先在 rank space 完成。** 概率校准对 AUC 基本无效；固定低剂量、
+  per-finding residual、pair fixed/broken 和 exact fail-open 更容易解释和复现。
+- **运行期是模型选择的一部分。** 9 小时限制会把“本地更强但推理过长”的方案变成
+  0 分；deadline、skip、子模型独立失败和 anchor 回退需要在设计阶段完成。
+- **公开代码提供起点，复盘提供方向。** 公开强模型帮助快速搭载具，真正需要记录的是
+  哪些改动在 hidden 上迁移、哪些本地 proxy 只是噪声，以及下一次如何提前验证。
+
+完整清单见 [`docs/LESSONS.md`](docs/LESSONS.md)，跨方案证据和失败条件见
+[`public_intel/NVIDIA_WRITEUP_RESEARCH.md`](public_intel/NVIDIA_WRITEUP_RESEARCH.md)。
+
 ## 最终 scoring wave
 
 所有终盘候选完整保存在 [`final_submissions/`](final_submissions/README.md)。
@@ -267,6 +288,39 @@ with reversible fallbacks.
 The common principle was: small change, explicit mechanism, reversible
 failure. Public strong models supplied the vehicle; the core contribution was
 choosing which column and which small part of the ranking deserved surgery.
+
+## Lessons and takeaways
+
+- **Supervision quality sets the ceiling.** The strongest public solutions
+  repeatedly constructed continuous soft labels from reports and images. The
+  58 expert studies served as a definition gate; fine-grained weight searches
+  needed broader evidence.
+- **Anatomy is a high-value investment.** Physical geometry, side
+  normalization, knee-centred crops, bone landmarks, compartment crops, and
+  ROI/lesion supervision recurred across winners and addressed a real
+  representation bottleneck.
+- **Diversity needs genuine error differences.** Checkpoints sharing an
+  architecture, labels, and input pipeline tend to be highly correlated.
+  Different views, label recipes, anatomical regions, and model families are
+  more likely to add complementary signal.
+- **Use a layered validation system.** Gold58 filters gross regressions; a
+  large weak-label surface supports directional experiments; scanner/site
+  grouped folds expose shortcut learning; hidden leaderboard receipts provide
+  the final calibration.
+- **AUC post-processing belongs in rank space.** Probability calibration has
+  little effect on AUC. Fixed low doses, per-finding residuals, fixed/broken
+  pair analysis, and exact fail-open are easier to explain and reproduce.
+- **Runtime is part of model selection.** Under a nine-hour limit, a locally
+  stronger but slow candidate can score zero. Deadlines, skips, per-child
+  failure, and anchor fallback need to be designed before model selection.
+- **Public code supplies a starting point; retrospective evidence supplies
+  direction.** Public strong models accelerate the vehicle. The durable value
+  comes from recording which changes transferred to hidden data, which local
+  proxy gains were noise, and how to validate earlier next time.
+
+See [`docs/LESSONS.md`](docs/LESSONS.md) for the full checklist and
+[`public_intel/NVIDIA_WRITEUP_RESEARCH.md`](public_intel/NVIDIA_WRITEUP_RESEARCH.md)
+for the cross-solution evidence and failure conditions.
 
 ## Final scoring wave
 
