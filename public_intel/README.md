@@ -17,3 +17,5 @@ Files:
 - `TOPICS_INDEX.csv`: title, author, votes, URL, and content size for the 22
   captured topics.
 - `TOP_WRITEUPS.md`: structured summaries of the strongest solutions.
+- `NVIDIA_WRITEUP_RESEARCH.md`: deeper cross-solution mechanism, evidence,
+  runtime, and transfer analysis following the NVIDIA Kaggle research workflow.

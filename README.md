@@ -123,6 +123,8 @@ residual `.30`；更高剂量、更多目标列或更大的 residual bundle 都�
   选择，以及替代方案为什么被拒绝。
 - [`public_intel/TOP_WRITEUPS.md`](public_intel/TOP_WRITEUPS.md)：顶级选手
   write-up 的技术摘要与链接。
+- [`public_intel/NVIDIA_WRITEUP_RESEARCH.md`](public_intel/NVIDIA_WRITEUP_RESEARCH.md)：
+  按 NVIDIA Kaggle skill 的研究框架做的跨方案机制、证据和迁移分析。
 - [`docs/LESSONS.md`](docs/LESSONS.md)：下一场比赛应该怎么做。
 - [`final_submissions/`](final_submissions/README.md)：最终 notebook、manifest、
   dev 回执和 scoring ref。
@@ -291,6 +293,9 @@ Kaggle reported a notebook timeout and no score.
   post-processing decision and the reasons alternatives were rejected.
 - [`public_intel/TOP_WRITEUPS.md`](public_intel/TOP_WRITEUPS.md): summaries and
   links to the strongest post-competition write-ups.
+- [`public_intel/NVIDIA_WRITEUP_RESEARCH.md`](public_intel/NVIDIA_WRITEUP_RESEARCH.md):
+  a deeper NVIDIA-skill-guided analysis of mechanisms, evidence, runtime and
+  transfer opportunities.
 - [`docs/LESSONS.md`](docs/LESSONS.md): what to do differently next time.
 - [`final_submissions/`](final_submissions/README.md): final notebooks,
   manifests, dev receipts, and scoring references.

@@ -115,6 +115,25 @@ Their conclusion is important: label changes moved the board more than model
 changes, and a four-model ensemble with the same labels and input pipeline added
 little because the members were too correlated.
 
+## 8th place — Tomoki Hirose et al.
+
+Link: [8th Place Solution](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752219)
+
+The solution used a large, center-preserving slice cache (up to 168 slices) and
+image-first Astra labels. Its label mixture combined three report-derived
+sources with image assessments, using finding-specific image weights and a
+neighboring-weight perturbation check.
+
+It also ran two calibrated OOF self-distillation rounds:
+
+```text
+final training target = 0.6 * image/report soft label
+                      + 0.4 * calibrated OOF teacher
+```
+
+This is a useful example of improving supervision while keeping the label
+recipe fixed and auditable.
+
 ## 22nd place — matsurih (solo gold)
 
 Link: [22nd Place Solo Gold Solution](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752052)
@@ -163,6 +182,25 @@ AUC_f ≈ 0.5 + 6 × (base submission score - one-finding inverted probe score)
 
 The probe is useful when a public leaderboard hides per-column AUC, but it uses
 submission budget and should be planned in advance.
+
+## 19th place — yuto083 / shin0000 et al.
+
+Link: [19th Place Solution](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752252)
+
+This is the clearest “distill the ensemble” case in the competition. An earlier
+multi-family teacher took about seven hours, leaving almost no budget for
+another strong branch. The team distilled it into a ConvNeXt-Tiny student:
+
+- OOF teacher predictions from models that never saw the study;
+- a 50/50 target mixture of LLM labels and calibrated OOF predictions;
+- a slice-attention reader on a 140 mm / 384 px field of view;
+- 32 epochs and about 0.5 hours of inference;
+- the student reportedly reached about `0.962 public / 0.951 private`, slightly
+  above its teacher.
+
+The final three-model rank blend used fixed weights. Gold-optimized per-finding
+weights improved the Gold panel but lost public score, so fixed weights were
+kept.
 
 ## 235th place — report/image labels
 

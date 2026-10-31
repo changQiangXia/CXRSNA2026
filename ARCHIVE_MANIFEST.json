@@ -155,6 +155,76 @@
   ],
   "public_writeups": [
     {
+      "topic_id": "733343",
+      "title": "Knee Abnormality Detection AI Challenge Overview",
+      "author": "Po-Hao \"Howard\" Chen",
+      "votes": "103",
+      "comments": "17",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733343",
+      "content_chars": "13788",
+      "post_date": "2026-08-06T15:54:27.876Z"
+    },
+    {
+      "topic_id": "733932",
+      "title": "\"Not addressed\" is a label too — what we learned reading 4,407 knee reports with an LLM",
+      "author": "stevenleehans",
+      "votes": "63",
+      "comments": "11",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/733932",
+      "content_chars": "9171",
+      "post_date": "2026-08-09T05:54:36.206Z"
+    },
+    {
+      "topic_id": "735304",
+      "title": "Best single-model score",
+      "author": "roy214",
+      "votes": "82",
+      "comments": "143",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/735304",
+      "content_chars": "517",
+      "post_date": "2026-08-14T23:38:09.839Z"
+    },
+    {
+      "topic_id": "743416",
+      "title": "Please clarify which external knee MRI datasets are allowed",
+      "author": "YYama",
+      "votes": "103",
+      "comments": "44",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/743416",
+      "content_chars": "3859",
+      "post_date": "2026-09-26T01:52:06.163Z"
+    },
+    {
+      "topic_id": "745861",
+      "title": "Tricks for the competition ",
+      "author": "hengck23",
+      "votes": "40",
+      "comments": "54",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/745861",
+      "content_chars": "75",
+      "post_date": "2026-10-04T22:58:11.225Z"
+    },
+    {
+      "topic_id": "746792",
+      "title": "Reaching 0.949 with one CoAtNet: labels, native crops, and anatomical mirroring",
+      "author": "Danial Zakaria",
+      "votes": "42",
+      "comments": "57",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/746792",
+      "content_chars": "8990",
+      "post_date": "2026-10-07T19:34:51.060Z"
+    },
+    {
+      "topic_id": "747658",
+      "title": "RSNA Knee MRI reports — LLM label-extraction benchmark ",
+      "author": "Kirderf",
+      "votes": "29",
+      "comments": "38",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/747658",
+      "content_chars": "737",
+      "post_date": "2026-10-09T08:02:00.503Z"
+    },
+    {
       "topic_id": "751888",
       "title": "Silver Medal - 235th Place - Create Labels from Reports and Images",
       "author": "Chris Deotte",
@@ -163,6 +233,16 @@
       "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/751888",
       "content_chars": "10062",
       "post_date": "2026-10-23T00:55:59.053Z"
+    },
+    {
+      "topic_id": "751895",
+      "title": "Sharing my best kaggle work so far",
+      "author": "Tom",
+      "votes": "40",
+      "comments": "13",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/751895",
+      "content_chars": "12348",
+      "post_date": "2026-10-23T01:12:37.391Z"
     },
     {
       "topic_id": "751962",
@@ -183,6 +263,16 @@
       "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/751972",
       "content_chars": "66018",
       "post_date": "2026-10-23T09:12:46.882Z"
+    },
+    {
+      "topic_id": "752012",
+      "title": "Thank You Challengers",
+      "author": "Po-Hao \"Howard\" Chen",
+      "votes": "22",
+      "comments": "12",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752012",
+      "content_chars": "1120",
+      "post_date": "2026-10-23T12:36:46.956Z"
     },
     {
       "topic_id": "752052",
@@ -213,6 +303,26 @@
       "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752217",
       "content_chars": "14508",
       "post_date": "2026-10-24T00:10:25.905Z"
+    },
+    {
+      "topic_id": "752219",
+      "title": "8th Place Solution",
+      "author": "Tomoki Hirose",
+      "votes": "22",
+      "comments": "0",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752219",
+      "content_chars": "22150",
+      "post_date": "2026-10-24T00:22:41.608Z"
+    },
+    {
+      "topic_id": "752252",
+      "title": "19th Place Solution",
+      "author": "yuto083",
+      "votes": "19",
+      "comments": "1",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752252",
+      "content_chars": "18737",
+      "post_date": "2026-10-24T04:06:19.755Z"
     },
     {
       "topic_id": "752370",
@@ -253,6 +363,16 @@
       "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752510",
       "content_chars": "22595",
       "post_date": "2026-10-25T06:50:39.063Z"
+    },
+    {
+      "topic_id": "753198",
+      "title": "Recap of Competition - Congratulations to the Winners!",
+      "author": "Elizabeth Park",
+      "votes": "9",
+      "comments": "0",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/753198",
+      "content_chars": "1676",
+      "post_date": "2026-10-27T14:43:50.677Z"
     }
   ],
   "excluded": [
