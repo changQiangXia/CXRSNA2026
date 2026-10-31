@@ -95,9 +95,8 @@ Public assets accelerated the starting point, but the final gap was made by:
 - rigorous ablations;
 - understanding why the public blend path worked.
 
-The archive therefore preserves both the public references and the solo
-competitor’s own
-negative results.
+The archive therefore preserves both the public references and the negative
+results from the solo entry.
 
 ## 8. The next competition checklist
 
