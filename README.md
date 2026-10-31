@@ -43,7 +43,7 @@ ACL、MCL、内侧半月板、外侧半月板、
 骨挫伤、骨折
 ```
 
-核心任务不是“堆一个更大的模型”，而是：
+核心工作包括：
 
 1. 把多语言报告和图像转成更好的监督；
 2. 训练一个真正只依赖图像、能泛化到 hidden studies 的 reader；
@@ -73,17 +73,17 @@ residual `.30`；更高剂量、更多目标列或更大的 residual bundle 都�
 
 ## 创新 tricks
 
-主要创新不在“重新发明 backbone”，而在于把 12 列 AUC 当成 12 个独立排序问题，
+主要创新集中在 rank space：把 12 列 AUC 当成 12 个独立排序问题，
 在 rank space 做可审计、可回退的小手术。
 
 - **单列 A5 residual**：不把弱 A5 模型整模替换强宿主，只对 Effusion 注入固定 `.30`
   rank residual。A5 与宿主的排序相关性较低，少量纠错反而能跨隐藏集。
-- **逐病种而不是全局校准**：AUC 对概率校准不敏感，因此采用 per-finding rank residual、
+- **逐病种 rank 后处理**：AUC 对概率校准不敏感，因此采用 per-finding rank residual、
   per-finding reader 权重和固定 dose；不做 isotonic、概率偏移或学习式 stacker。
 - **rank-band / consensus 路由**：只在中间 rank 区、且 reader 家族一致的 study 上改动，
   保留极端样本和分歧样本，减少“为了平均分而重排所有人”的风险。
 - **pair 级验收**：用 fixed/broken pair、逐 fold 方向、六 reader/A5 表面和 bootstrap
-  检查一个技巧是否在修错，而不是只看 macro AUC 的单次涨分。
+  检查一个技巧是否在修错；macro AUC 只作辅助观察。
 - **一个小改动配合 exact fail-open**：A5、child 或额外 TTA 失败时，逐字节恢复上一个
   anchor；最终候选优先选择不会因为一个子模型缺失而变成无效提交的组合。
 - **运行期也是模型选择的一部分**：给每个 stage 设置 deadline、skip 和 30 分钟提交余量；
@@ -136,7 +136,7 @@ residual `.30`；更高剂量、更多目标列或更大的 residual bundle 都�
 - 显示为 `0.959` 不代表两个提交在全精度上相同；
 - 本地 proxy 增量低于约 `0.001` 时，通常不足以预测显示分变化；
 - 9 小时 code competition 中，推理耗时和模型精度同等重要；
-- 58 例专家标注面板是过滤器，不是可靠的最终 ranker。
+- 58 例专家标注面板用于过滤；最终排序以 hidden 结果为准。
 
 ## 复现与私有资产
 
@@ -200,7 +200,7 @@ effusion, synovitis, Baker's cyst,
 contusion, fracture
 ```
 
-The central problem was not “train one larger model.” It was:
+The central problem required:
 
 1. convert multilingual reports and images into better supervision;
 2. build an image-only reader that generalizes to hidden studies;
@@ -234,24 +234,24 @@ residual bundles repeatedly failed local or hidden checks.
 
 ## Innovation tricks
 
-The main contribution was not a new backbone. The 12 AUC columns were treated as
-12 independent ranking problems and made small, auditable rank-space changes
+The main contribution operated in rank space. The 12 AUC columns were treated as
+12 independent ranking problems with small, auditable changes
 with reversible fallbacks.
 
-- **Single-column A5 residual:** instead of replacing a strong host with a weak
-  A5 model, a fixed `.30` rank residual was applied only on Effusion. The A5
+- **Single-column A5 residual:** a fixed `.30` rank residual was applied only
+  on Effusion while retaining the strong host. The A5
   reader is weak alone but partially decorrelated from the host, so a small
   correction can repair host ranking mistakes.
-- **Per-finding post-processing instead of global calibration:** AUC is
+- **Per-finding rank post-processing:** AUC is
   invariant to probability calibration, so per-finding rank residuals,
   reader weights and fixed doses. We rejected isotonic calibration, probability
   offsets and learned cross-label stackers.
 - **Rank-band and consensus routing:** changes were restricted to the middle
   rank band and to studies where reader families agreed, preserving extreme
-  predictions and treating disagreement as uncertainty rather than signal.
+  predictions and treating disagreement as uncertainty.
 - **Pair-level acceptance:** fixed/broken pair counts, per-fold direction,
   six reader/A5 surfaces and bootstrap checks were used to test whether a trick
-  repaired ranking errors rather than merely changing the macro AUC once.
+  repaired ranking errors; a one-time macro AUC change was insufficient.
 - **One small change with exact fail-open:** if A5, a child or optional TTA
   failed, the prior anchor submission was restored byte-for-byte. Final
   candidates favored combinations that remained valid when a child was absent.
@@ -283,8 +283,8 @@ Every final-wave candidate is preserved under
 | `R150 V2` | 57530094 | 0.959 | 0.945 | final reader-scale candidate |
 
 The last two scoring submissions by time were `allgold` and `R150`; because
-several submissions were nearly simultaneous, the whole final wave is archived
-instead of guessing which two a reader might mean.
+several submissions were nearly simultaneous, the whole final wave is archived,
+removing any ambiguity about which two a reader might mean.
 
 `A5eff30 + Baker12` (`ref 57509367`) is retained as a documented failure:
 Kaggle reported a notebook timeout and no score.
@@ -310,13 +310,12 @@ Kaggle reported a notebook timeout and no score.
 ## Reading the result correctly
 
 - Public and private leaderboards must be treated as different samples.
-- A displayed `0.959` is not proof that two submissions are equal at full
-  precision.
+- A displayed `0.959` does not establish equality at full precision.
 - A local proxy gain below roughly `0.001` is usually too small to predict a
   displayed leaderboard move.
 - A nine-hour code competition can lose an otherwise strong submission to
   runtime variance. Inference accounting is part of the model.
-- The 58-expert-study panel is a useful filter, not a reliable ranker.
+- The 58-expert-study panel serves as a useful filter; hidden results remain decisive.
 
 ## Reproducibility and private assets
 
@@ -329,7 +328,7 @@ See [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md) for attribution and
 [`NOTICE.md`](NOTICE.md) for the archive’s legal and sharing boundary.
 
 This was a solo competition. References to other teams in the public-intel
-section describe external write-ups, not a team merge at the entry level.
+section describe external write-ups; the competition entry itself was solo.
 
 The private Kaggle datasets referenced by the archived notebooks, with direct
 links, are listed in [`docs/PRIVATE_ASSETS.md`](docs/PRIVATE_ASSETS.md).

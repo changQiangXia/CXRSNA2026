@@ -1,7 +1,8 @@
 # What To Do Better Next Time
 
 This is the highest-value section of the archive. The lessons are based on
-observed public and hidden results, not only on local proxy scores.
+observed public and hidden results, with local proxy scores as supporting
+evidence.
 
 ## 1. Spend the first budget on the validation system
 
@@ -31,7 +32,7 @@ Next time, build a label-quality evaluation harness before training a new
 backbone. A strong model trained on the wrong target definition cannot recover
 the missing information.
 
-## 3. Model the anatomy, not only the image
+## 3. Model the anatomy as well as the image
 
 The strongest solutions used one or more of:
 
@@ -55,7 +56,7 @@ Adding two similar checkpoints rarely helped. Helpful diversity came from:
 - different backbones when disagreement was real;
 - a genuinely independent public model family.
 
-Always measure rank correlation and marginal blend gain, not just the member’s
+Always measure rank correlation and marginal blend gain beyond the member’s
 solo score.
 
 ## 5. Do inference engineering early

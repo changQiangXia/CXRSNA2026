@@ -20,7 +20,7 @@ The solo entry moved through roughly:
 Key axes:
 
 - a stronger CoAtNet/Raptor reader;
-- rank-space fusion instead of probability calibration;
+- rank-space fusion; probability calibration was avoided;
 - FOV/window laddering;
 - careful preservation of the public 384/224 checkpoint pair.
 

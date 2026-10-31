@@ -32,10 +32,10 @@ from a large ensemble of public models?
 
 ### 1. Labels were the model
 
-The first-place and second-place solutions both spent most of their effort on
-supervision, not architecture:
+The first-place and second-place solutions both concentrated most of their
+effort on supervision:
 
-- continuous probabilities rather than hard labels;
+- continuous probabilities;
 - report plus image evidence, with the agent able to request more slices;
 - explicit finding criteria and “not mentioned” handling;
 - image-only or verification reads to avoid copying report errors;
@@ -71,7 +71,7 @@ shortcuts.
 
 ### 3. Diversity had to be real
 
-The winners did not simply add more checkpoints:
+The winners added checkpoints with different error profiles:
 
 - 2nd place used different backbones, views, seeds, and two finding specialists;
 - 3rd place used explicit groups with different labels, OAI dose, resolutions,
@@ -82,8 +82,8 @@ The winners did not simply add more checkpoints:
 - 22nd place valued plane models and compartment crops more than tiny
   architecture/head changes.
 
-The practical test is not “does the new member have a good solo score?” but
-“is its ranking error profile different enough to repair the existing blend?”
+The practical test is whether a new member’s ranking-error profile is different
+enough to repair the existing blend, beyond its solo score.
 
 ### 4. Fixed/simple blends beat flexible post-processing
 
