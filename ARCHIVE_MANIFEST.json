@@ -1,0 +1,265 @@
+{
+  "archive": "CXRSNA2026",
+  "competition": "rsna-knee-abnormality-detection",
+  "created_utc": "2026-10-31T07:10:34.956501+00:00",
+  "repository_files_note": "Raw data, private weights, credentials and large caches are excluded.",
+  "final_wave": [
+    {
+      "directory": "final_submissions/2026-10-21_a5eff20_only",
+      "kernel": "intoxicatinglips/rsna-knee-newtable-a5eff20-only",
+      "notebooks": [
+        "rsna-knee-newtable-a5eff20-only.ipynb"
+      ],
+      "notebook_sha256": {
+        "rsna-knee-newtable-a5eff20-only.ipynb": "124dabe2fafeb4bf5d4d6c19f268d3e56698041b1566ff5a666cdc624ad00522"
+      },
+      "submission": {
+        "ref": 57493876,
+        "status": "COMPLETE",
+        "public_score": "0.959",
+        "private_score": "0.945",
+        "submitted_at_cst": "2026-10-22 02:43:10",
+        "observed_result": {
+          "system_selected": true,
+          "relative_order": "below rsna-knee-newtable-a5eff30-only",
+          "numeric_public_score": null,
+          "source": "user leaderboard observation"
+        }
+      },
+      "status": "online selected; below A5eff30-only; retain as validated fallback"
+    },
+    {
+      "directory": "final_submissions/2026-10-21_a5eff30_only",
+      "kernel": "intoxicatinglips/rsna-knee-newtable-a5eff30-only",
+      "notebooks": [
+        "rsna-knee-newtable-a5eff30-only.ipynb"
+      ],
+      "notebook_sha256": {
+        "rsna-knee-newtable-a5eff30-only.ipynb": "b9ac76c07c666ba258fd93e6de921e49377f7bf633eef728fad02ffb5c9cf2b6"
+      },
+      "submission": {
+        "status": "COMPLETE",
+        "ref": 57481279,
+        "public_score": "0.959",
+        "private_score": "0.945",
+        "final_public_rank": 182,
+        "kernel_version": 1,
+        "submitted_at_utc": "2026-10-21 12:17:56",
+        "submitted_at_cst": "2026-10-21 20:17:56",
+        "description": "anchor + A5 Effusion only v1: formula replay PASS",
+        "observed_result": {
+          "highest_current_score": true,
+          "system_selected": true,
+          "rank_before": 185,
+          "rank_after": 175,
+          "numeric_public_score": null,
+          "source": "user leaderboard observation"
+        }
+      },
+      "status": "online success; current highest score; rank improved 185 -> 175"
+    },
+    {
+      "directory": "final_submissions/2026-10-22_allgold",
+      "kernel": "intoxicatinglips/rsna-knee-adapted20-v2-soup75-r384-all-gold",
+      "notebooks": [
+        "rsna-knee-a5eff30-adapted20v2-soup75-r384allgold.ipynb"
+      ],
+      "notebook_sha256": {
+        "rsna-knee-a5eff30-adapted20v2-soup75-r384allgold.ipynb": "f5cd4b320d4d3fffa989b19f64509a7270748666f927460dbeee236575f7d58b"
+      },
+      "submission": {
+        "ref": 57525829,
+        "status": "COMPLETE",
+        "public_score": "0.959",
+        "private_score": "0.945",
+        "kernel_version": 6,
+        "submitted_cst": "2026-10-22T21:14:02+08:00"
+      },
+      "status": "complete; public 0.959; private 0.945; ref 57525829"
+    },
+    {
+      "directory": "final_submissions/2026-10-22_allproxy",
+      "kernel": "intoxicatinglips/rsna-knee-adapted20-v2-soup75-r384-all-proxy",
+      "notebooks": [
+        "rsna-knee-a5eff30-adapted20v2-soup75-r384allproxy.ipynb"
+      ],
+      "notebook_sha256": {
+        "rsna-knee-a5eff30-adapted20v2-soup75-r384allproxy.ipynb": "fd6dbe7cdeca3a10e667a1a7074980e1913111cacc02a4433787587fc22e9b7b"
+      },
+      "submission": {
+        "ref": 57525824,
+        "status": "COMPLETE",
+        "public_score": "0.959",
+        "private_score": "0.945",
+        "kernel_version": 4,
+        "submitted_cst": "2026-10-22T21:13:55+08:00"
+      },
+      "status": "complete; public 0.959; private 0.945; ref 57525824"
+    },
+    {
+      "directory": "final_submissions/2026-10-22_mm08",
+      "kernel": "intoxicatinglips/rsna-knee-newtable-a5eff30-coatfull-adapted20-mm08",
+      "notebooks": [
+        "rsna-knee-newtable-a5eff30-coatfull-adapted20-mm08.ipynb"
+      ],
+      "notebook_sha256": {
+        "rsna-knee-newtable-a5eff30-coatfull-adapted20-mm08.ipynb": "134779bfa1f13ae32f493b9844a17bb45309ee27da7dd8b4690520e082f2ce16"
+      },
+      "submission": {
+        "ref": 57514882,
+        "file_name": "submission.csv",
+        "kernel": "intoxicatinglips/rsna-knee-a5eff30-coatfull-stable11-mm08",
+        "kernel_version": 1,
+        "submitted_at_utc": "2026-10-22 07:16:50 UTC",
+        "submitted_at_cst": "2026-10-22 15:16:50 CST",
+        "status": "COMPLETE",
+        "public_score": "0.959",
+        "private_score": "0.945",
+        "observed_at_cst": "2026-10-22 23:11:40 CST",
+        "observed_result": {
+          "system_selected": true,
+          "replaced": "intoxicatinglips/rsna-knee-newtable-a5eff20-only Version 1",
+          "order_vs_a5eff30_only": "lower",
+          "order_vs_a5eff20_only": "higher",
+          "current_portfolio_position": 2
+        },
+        "description": "A5eff30 + CoATFull stable11 mm08; dev PASS",
+        "polling": "none; user monitors scoring"
+      },
+      "status": "online success; public 0.959; private 0.945; current second selected submission"
+    },
+    {
+      "directory": "final_submissions/2026-10-22_r150",
+      "kernel": "intoxicatinglips/rsna-knee-newtable-a5eff30-r150",
+      "notebooks": [
+        "rsna-knee-newtable-a5eff30-r150.ipynb"
+      ],
+      "notebook_sha256": {
+        "rsna-knee-newtable-a5eff30-r150.ipynb": "2574e3368ae5f2451b80f3edd1023bd8df9461c0b15b3bee6f8b5559a9e0aa82"
+      },
+      "submission": {
+        "ref": 57530094,
+        "kernel": "intoxicatinglips/rsna-knee-newtable-a5eff30-r150",
+        "kernel_version": 2,
+        "file": "submission.csv",
+        "submitted_at_utc": "2026-10-22T15:34:34Z",
+        "submitted_at_cst": "2026-10-22T23:34:34+08:00",
+        "status": "COMPLETE",
+        "public_score": "0.959",
+        "private_score": "0.945",
+        "completed_observed_at_cst": "2026-10-31T23:07:36+08:00",
+        "description": "RSNA Knee newtable A5eff30 R150 uniform reader; dev V2 PASS; user approved scoring"
+      },
+      "status": "complete; public 0.959; private 0.945; ref 57530094"
+    }
+  ],
+  "public_writeups": [
+    {
+      "topic_id": "751888",
+      "title": "Silver Medal - 235th Place - Create Labels from Reports and Images",
+      "author": "Chris Deotte",
+      "votes": "48",
+      "comments": "17",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/751888",
+      "content_chars": "10062",
+      "post_date": "2026-10-23T00:55:59.053Z"
+    },
+    {
+      "topic_id": "751962",
+      "title": "33rd Place (Silver) Solution – No External Data",
+      "author": "hirokenn",
+      "votes": "18",
+      "comments": "0",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/751962",
+      "content_chars": "9072",
+      "post_date": "2026-10-23T07:59:17.919Z"
+    },
+    {
+      "topic_id": "751972",
+      "title": "49th place (silver, solo): whole-study 2.5D reader + report labels + rank blend",
+      "author": "Komil Parmar",
+      "votes": "19",
+      "comments": "5",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/751972",
+      "content_chars": "66018",
+      "post_date": "2026-10-23T09:12:46.882Z"
+    },
+    {
+      "topic_id": "752052",
+      "title": "22nd place (solo gold) solution",
+      "author": "matsurih",
+      "votes": "37",
+      "comments": "9",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752052",
+      "content_chars": "27569",
+      "post_date": "2026-10-23T15:02:21.183Z"
+    },
+    {
+      "topic_id": "752190",
+      "title": "5th Place Solution",
+      "author": "Rashmi B",
+      "votes": "43",
+      "comments": "7",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752190",
+      "content_chars": "25526",
+      "post_date": "2026-10-23T21:59:12.985Z"
+    },
+    {
+      "topic_id": "752217",
+      "title": "7th place solution with no external training data",
+      "author": "BarryZhou",
+      "votes": "61",
+      "comments": "22",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752217",
+      "content_chars": "14508",
+      "post_date": "2026-10-24T00:10:25.905Z"
+    },
+    {
+      "topic_id": "752370",
+      "title": "2nd Place Solution",
+      "author": "azamat1ch",
+      "votes": "35",
+      "comments": "8",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752370",
+      "content_chars": "15862",
+      "post_date": "2026-10-24T15:50:03.394Z"
+    },
+    {
+      "topic_id": "752468",
+      "title": "1st Place Solution",
+      "author": "tascj",
+      "votes": "113",
+      "comments": "18",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752468",
+      "content_chars": "17953",
+      "post_date": "2026-10-25T01:57:31.798Z"
+    },
+    {
+      "topic_id": "752474",
+      "title": "1st place solution — Better labels, anatomy-aware MRI models",
+      "author": "sakaku",
+      "votes": "39",
+      "comments": "3",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752474",
+      "content_chars": "44539",
+      "post_date": "2026-10-25T03:06:48.381Z"
+    },
+    {
+      "topic_id": "752510",
+      "title": "3rd Place Solution: RSNA Knee Abnormality Detection 2026",
+      "author": "Zhihong Li",
+      "votes": "21",
+      "comments": "3",
+      "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/752510",
+      "content_chars": "22595",
+      "post_date": "2026-10-25T06:50:39.063Z"
+    }
+  ],
+  "excluded": [
+    "DICOM",
+    "competition labels",
+    "checkpoints",
+    "Kaggle credentials",
+    "large notebook outputs"
+  ]
+}

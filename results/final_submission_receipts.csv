@@ -1,0 +1,8 @@
+candidate_dir,kernel,kernel_version,submission_ref,status,public_score,private_score,notes
+2026-10-22_r150,rsna-knee-newtable-a5eff30-r150,2,57530094,COMPLETE,0.959,0.945,final reader R150 candidate
+2026-10-22_allgold,rsna-knee-a5eff30-adapted20v2-soup75-r384allgold,6,57525829,COMPLETE,0.959,0.945,three-child conservative route
+2026-10-22_allproxy,rsna-knee-a5eff30-adapted20v2-soup75-r384allproxy,4,57525824,COMPLETE,0.959,0.945,three-child aggressive route
+2026-10-22_mm08,rsna-knee-a5eff30-coatfull-stable11-mm08,1,57514882,COMPLETE,0.959,0.945,CoAtFull MedMen residual
+2026-10-21_a5eff30_only,rsna-knee-newtable-a5eff30-only,1,57481279,COMPLETE,0.959,0.945,A5 Effusion .30 anchor
+2026-10-21_a5eff20_only,rsna-knee-newtable-a5eff20-only,1,57493876,COMPLETE,0.959,0.945,A5 Effusion .20 fallback
+2026-10-22_baker12,rsna-knee-newtable-a5eff30-baker12,1,57509367,COMPLETE,,,timeout; no score

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "mode": "group",
+  "low": 0.05,
+  "high": 0.22,
+  "high_labels": [
+    "MCL",
+    "Lateral Meniscus",
+    "PF OA",
+    "Contusion"
+  ],
+  "source_labels": [
+    "MCL",
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "PF OA",
+    "Contusion"
+  ],
+  "lambda_by_finding": {
+    "ACL": 0.05,
+    "MCL": 0.22,
+    "Medial Meniscus": 0.05,
+    "Lateral Meniscus": 0.22,
+    "Medial OA": 0.05,
+    "Lateral OA": 0.05,
+    "PF OA": 0.22,
+    "Effusion": 0.05,
+    "Synovitis": 0.05,
+    "Baker's": 0.05,
+    "Contusion": 0.22,
+    "Fracture": 0.05
+  },
+  "rows": 3,
+  "changed_cells": 0,
+  "moved_rows": 0,
+  "seconds": 0.012659788131713867
+}

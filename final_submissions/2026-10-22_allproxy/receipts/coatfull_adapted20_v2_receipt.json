@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "branch": "coatfull-adapted20-v2",
+  "route": {
+    "ACL": 0.2,
+    "MCL": 0.2,
+    "Medial Meniscus": 0.1,
+    "Lateral Meniscus": 0.2,
+    "Medial OA": 0.296,
+    "Lateral OA": 0.296,
+    "PF OA": 0.264,
+    "Effusion": 0.2,
+    "Synovitis": 0.2,
+    "Baker's": 0.296,
+    "Contusion": 0.2
+  },
+  "labels": [
+    "ACL",
+    "MCL",
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Lateral OA",
+    "PF OA",
+    "Effusion",
+    "Synovitis",
+    "Baker's",
+    "Contusion"
+  ],
+  "rows": 3,
+  "changed_cells": 0,
+  "seconds": 0.01903533935546875
+}

@@ -1,0 +1,42 @@
+# Competition data and large derived artifacts
+data/
+input/
+raw/
+caches/
+remote_outputs/
+*.dcm
+*.nii
+*.nii.gz
+*.npz
+*.npy
+*.parquet
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.zip
+*.tar
+*.tar.gz
+
+# Credentials and local state
+.env
+.env.*
+.kaggle/
+kaggle.json
+*.pem
+*.key
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local working files
+*.log
+*.out
+*.pid
+*.tmp
+.DS_Store
+
+# Small final-run receipts are intentionally archived as provenance.
+!final_submissions/**/receipts/*.log
+!final_submissions/**/receipts/*.npz

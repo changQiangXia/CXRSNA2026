@@ -1,0 +1,75 @@
+{
+ "weights": {
+  "raptor": 0.5,
+  "ours": 0.5,
+  "raptor_per_class": {
+   "Medial OA": 0.5,
+   "Lateral OA": 0.15,
+   "PF OA": 0.65,
+   "Synovitis": 0.85,
+   "Baker's": 0.3
+  }
+ },
+ "rows": 3,
+ "raptor_failed": 0,
+ "ours_failed": 0,
+ "raptor_seconds": 64.6,
+ "total_seconds": 533.2,
+ "spearman_raptor_raw_vs_sub": {
+  "ACL": 1.0,
+  "MCL": 1.0,
+  "Medial Meniscus": 1.0,
+  "Lateral Meniscus": 1.0,
+  "Medial OA": 1.0,
+  "Lateral OA": 1.0,
+  "PF OA": 1.0,
+  "Effusion": 1.0,
+  "Synovitis": 1.0,
+  "Baker's": 1.0,
+  "Contusion": 1.0,
+  "Fracture": 1.0
+ },
+ "spearman_raptor_vs_ours": {
+  "ACL": 1.0,
+  "MCL": 1.0,
+  "Medial Meniscus": 1.0,
+  "Lateral Meniscus": -0.5,
+  "Medial OA": -0.5,
+  "Lateral OA": 1.0,
+  "PF OA": 1.0,
+  "Effusion": 0.5,
+  "Synovitis": 1.0,
+  "Baker's": 1.0,
+  "Contusion": 1.0,
+  "Fracture": 0.5
+ },
+ "mode": "blend",
+ "both_failed": 0,
+ "rank_basis": "each model over its own non-failed rows",
+ "rank_band": {
+  "lo": 0.2,
+  "hi": 0.8,
+  "alpha": 1,
+  "agreement_cut": 0.6,
+  "agreement_threshold": null,
+  "agreement_rows": 3,
+  "agreement_row_fraction": 1.0,
+  "agreement_disabled_small_n": true,
+  "incoherent_policy": "mean",
+  "rule": "base + alpha*(median(R,R6,S6)-base) in middle band and coherent studies",
+  "changed_cells": 7,
+  "changed_fraction": 0.19444444444444445,
+  "moved_rows": 3,
+  "moved_row_fraction": 1.0,
+  "changed_by_class": {
+   "MCL": 1,
+   "Lateral Meniscus": 1,
+   "Medial OA": 1,
+   "Lateral OA": 1,
+   "Effusion": 1,
+   "Fracture": 2
+  },
+  "r6_rows": 3,
+  "s6_rows": 3
+ }
+}

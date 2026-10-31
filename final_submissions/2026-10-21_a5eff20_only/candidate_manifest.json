@@ -1,0 +1,153 @@
+{
+  "id": "intoxicatinglips/rsna-knee-newtable-a5eff20-only",
+  "title": "RSNA Knee newtable A5eff20 only",
+  "notebook_sha256": "124dabe2fafeb4bf5d4d6c19f268d3e56698041b1566ff5a666cdc624ad00522",
+  "metadata_sha256": "49bde092c68a86ca272f89eef91dea3336fe5ac6df84a1a10c7185640c5e7c28",
+  "source": "kaggle_kernels/rsna-knee-newtable-agree60-fsev5-22",
+  "change": "append one fail-open A5 residual cell; only Effusion at .20; all 20 anchor cells byte-identical",
+  "a5_labels": [
+    "Effusion"
+  ],
+  "a5_weight": 0.2,
+  "evidence": {
+    "original": {
+      "gold_delta": 0.00020703933747412417,
+      "proxy_delta": 0.00031809678395555707,
+      "proxy_fold_deltas": [
+        {
+          "fold": 0,
+          "n": 171,
+          "delta": 0.0005215195432586306
+        },
+        {
+          "fold": 1,
+          "n": 177,
+          "delta": 0.00017615176151764
+        },
+        {
+          "fold": 2,
+          "n": 176,
+          "delta": 0.0008298392732355442
+        },
+        {
+          "fold": 3,
+          "n": 166,
+          "delta": 0.0007883326763893361
+        },
+        {
+          "fold": 4,
+          "n": 180,
+          "delta": 2.8935185185208212e-05
+        }
+      ],
+      "positive_folds": 5,
+      "changed_columns": [
+        "Effusion"
+      ],
+      "bootstrap": {
+        "n": 2500,
+        "mean": 0.00032089791167581416,
+        "ci95": [
+          9.839438196639628e-05,
+          0.0005744917471784628
+        ],
+        "p_gt_zero": 0.9972
+      }
+    },
+    "mirror": {
+      "gold_delta": 0.0006211180124222615,
+      "proxy_delta": 0.0003834355828220559,
+      "proxy_fold_deltas": [
+        {
+          "fold": 0,
+          "n": 171,
+          "delta": 0.00046662274923137126
+        },
+        {
+          "fold": 1,
+          "n": 177,
+          "delta": 0.00021680216802166807
+        },
+        {
+          "fold": 2,
+          "n": 176,
+          "delta": 0.0007861635220125507
+        },
+        {
+          "fold": 3,
+          "n": 166,
+          "delta": 0.0010182630403363646
+        },
+        {
+          "fold": 4,
+          "n": 180,
+          "delta": 2.8935185185208212e-05
+        }
+      ],
+      "positive_folds": 5,
+      "changed_columns": [
+        "Effusion"
+      ],
+      "bootstrap": {
+        "n": 2500,
+        "mean": 0.00038186519486239266,
+        "ci95": [
+          0.0001528031926305795,
+          0.0006403069004230821
+        ],
+        "p_gt_zero": 0.9996
+      }
+    },
+    "checks": {
+      "one_column": true,
+      "original_positive": true,
+      "mirror_positive": true,
+      "both_five_of_five": true
+    }
+  },
+  "online_evidence": {
+    "positive": "Both selected top submissions use the common anchor; the selected double anchor adds A5 Effusion.",
+    "negative": "High-dose Baker/Lateral OA reader bundle, class-arm/Synovitis variants, and A5safe2 did not survive online ordering."
+  },
+  "audit": "reports/online_single_column_candidates_2026-10-21.json",
+  "static_preflight": "reports/online_single_column_static_preflight_2026-10-21.json",
+  "static_validation": {
+    "all_python_cells_compile": true,
+    "base_20_cells_byte_identical": true,
+    "exactly_one_appended_cell": true
+  },
+  "risk": "adds five A5 forwards; fail-open preserves the exact anchor",
+  "dev_push": {
+    "kernel_ref": "intoxicatinglips/rsna-knee-newtable-a5eff20-only",
+    "kernel_version": 1,
+    "status": "dev-pass",
+    "verification": {
+      "labels": [
+        "Effusion"
+      ],
+      "dose": 0.2,
+      "coverage": 1.0,
+      "worker_exits": [
+        0,
+        0
+      ],
+      "submission_receipt": "PASS",
+      "rows": 3,
+      "non_target_columns_unchanged": true
+    }
+  },
+  "scoring_submission": {
+    "ref": 57493876,
+    "status": "COMPLETE",
+    "public_score": "0.959",
+    "private_score": "0.945",
+    "submitted_at_cst": "2026-10-22 02:43:10",
+    "observed_result": {
+      "system_selected": true,
+      "relative_order": "below rsna-knee-newtable-a5eff30-only",
+      "numeric_public_score": null,
+      "source": "user leaderboard observation"
+    }
+  },
+  "status": "online selected; below A5eff30-only; retain as validated fallback"
+}

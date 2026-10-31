@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "candidate": "rsna-knee-newtable-a5eff30-coatfull-adapted20-mm08",
+  "dir": "remote_outputs/dev_mm08_v1_20261022",
+  "expected_checkpoint_sha": "f1d9e919c8f827cf125be9a59e8b80cd7d8e7bcbade6db8d9de5a6711908dd70",
+  "route": {
+    "Medial Meniscus": 0.08,
+    "ACL": 0.2,
+    "MCL": 0.2,
+    "Lateral Meniscus": 0.2,
+    "Medial OA": 0.2,
+    "Lateral OA": 0.2,
+    "PF OA": 0.2,
+    "Effusion": 0.2,
+    "Synovitis": 0.2,
+    "Baker's": 0.2,
+    "Contusion": 0.2
+  },
+  "checks": {
+    "artifacts_present": true,
+    "child_ok": true,
+    "child_rows_positive": true,
+    "raw_12_labels": true,
+    "raw_finite": true,
+    "raw_range": true,
+    "residual_pass": true,
+    "residual_route_exact": true,
+    "residual_labels_11": true,
+    "submission_13_columns": true,
+    "submission_ids_order": true,
+    "submission_finite": true,
+    "submission_range": true,
+    "fracture_unchanged": true,
+    "target_activity_checked": true
+  },
+  "details": {
+    "coat_status": {
+      "status": "ok",
+      "rows": 3,
+      "seconds": 30.3
+    },
+    "raw_shape": [
+      3,
+      13
+    ],
+    "residual_receipt": {
+      "status": "PASS",
+      "branch": "coatfull-stable11-mm08",
+      "labels": [
+        "Medial Meniscus",
+        "ACL",
+        "MCL",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion"
+      ],
+      "route": {
+        "Medial Meniscus": 0.08,
+        "ACL": 0.2,
+        "MCL": 0.2,
+        "Lateral Meniscus": 0.2,
+        "Medial OA": 0.2,
+        "Lateral OA": 0.2,
+        "PF OA": 0.2,
+        "Effusion": 0.2,
+        "Synovitis": 0.2,
+        "Baker's": 0.2,
+        "Contusion": 0.2
+      },
+      "rows": 3,
+      "changed_cells": 0,
+      "seconds": 0.02012014389038086
+    },
+    "submission_shape": [
+      3,
+      13
+    ],
+    "changed_target_cells": 0
+  },
+  "evidence_boundary": "This verifies downloaded dev artifacts only; it does not submit scoring or establish hidden score."
+}

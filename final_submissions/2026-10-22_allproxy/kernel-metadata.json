@@ -1,0 +1,29 @@
+{
+ "id": "intoxicatinglips/rsna-knee-adapted20-v2-soup75-r384-all-proxy",
+ "title": "RSNA Knee adapted20-v2 soup75 R384 all proxy",
+ "code_file": "rsna-knee-a5eff30-adapted20v2-soup75-r384allproxy.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_internet": false,
+ "enable_tpu": false,
+ "machine_shape": "NvidiaTeslaT4",
+ "competition_sources": [
+  "rsna-knee-abnormality-detection"
+ ],
+ "dataset_sources": [
+  "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+  "heliosli/rsna-knee-compact-r7cnxfsss",
+  "rostigor/rsna-knee-r6-fe055406",
+  "nartaa/rsna-knee-publication-swa-weights-20261007",
+  "heliosli/rsna-orthofoundation-fold0-epoch7-20261004",
+  "nartaa/rsna-knee-s6fall-weights",
+  "intoxicatinglips/knee-guts-leg-rob5",
+  "intoxicatinglips/rsna-knee-a5-private-v1",
+  "mattiaangeli/knee-mri-fold-weights",
+  "intoxicatinglips/rsna-knee-coatfull-ft-v1",
+  "intoxicatinglips/rsna-knee-coatfull-soup75-v1",
+  "intoxicatinglips/knee-guts-leg-r384ft"
+ ]
+}

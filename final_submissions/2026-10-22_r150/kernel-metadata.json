@@ -1,0 +1,26 @@
+{
+ "id": "intoxicatinglips/rsna-knee-newtable-a5eff30-r150",
+ "title": "RSNA Knee newtable A5eff30 R150",
+ "code_file": "rsna-knee-newtable-a5eff30-r150.ipynb",
+ "language": "python",
+ "kernel_type": "notebook",
+ "is_private": true,
+ "enable_gpu": true,
+ "enable_internet": false,
+ "enable_tpu": false,
+ "machine_shape": "NvidiaTeslaT4",
+ "competition_sources": [
+  "rsna-knee-abnormality-detection"
+ ],
+ "dataset_sources": [
+  "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+  "heliosli/rsna-knee-compact-r7cnxfsss",
+  "rostigor/rsna-knee-r6-fe055406",
+  "nartaa/rsna-knee-publication-swa-weights-20261007",
+  "heliosli/rsna-orthofoundation-fold0-epoch7-20261004",
+  "nartaa/rsna-knee-s6fall-weights",
+  "intoxicatinglips/knee-guts-leg-rob5",
+  "intoxicatinglips/rsna-knee-a5-private-v1",
+  "mattiaangeli/knee-mri-fold-weights"
+ ]
+}

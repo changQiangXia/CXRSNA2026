@@ -1,0 +1,97 @@
+{
+  "id": "intoxicatinglips/rsna-knee-adapted20-v2-soup75-r384-all-proxy",
+  "title": "RSNA Knee adapted20-v2 soup75 R384 all proxy",
+  "notebook_sha256": "fd6dbe7cdeca3a10e667a1a7074980e1913111cacc02a4433787587fc22e9b7b",
+  "metadata_sha256": "58990db950c25c2721da41c7c974962cc40cc938f1182ccedc9fc7e28baca7d0",
+  "source": "kaggle_kernels/rsna-knee-newtable-a5eff30-adapted20v2-soup75-coreupper",
+  "supersedes": null,
+  "relationship": "aggressive-backup-to-rsna-knee-a5eff30-adapted20v2-soup75-r384allgold",
+  "stage_order": [
+    "adapted20-v2",
+    "f01soup75 joint",
+    "r384 K24 joint"
+  ],
+  "change": "jointly tune all seven f01-routed targets with a per-target proxy-maximising stable route",
+  "f01soup75": {
+    "dataset": "intoxicatinglips/rsna-knee-coatfull-soup75-v1",
+    "checkpoint": "coatfull_frz3mild_f01soup75.pt",
+    "checkpoint_sha256": "ffefff0439a64848968a27a65a5559531ca756f6ec390323acf586ab1ec41f67",
+    "route": {
+      "Medial Meniscus": 0.3,
+      "Lateral Meniscus": 0.1,
+      "Medial OA": 0.25,
+      "Lateral OA": 0.15,
+      "PF OA": 0.05,
+      "Baker's": 0.22,
+      "Contusion": 0.03
+    },
+    "k_eval": 94,
+    "cap_seconds": 5400
+  },
+  "r384": {
+    "dataset": "intoxicatinglips/knee-guts-leg-r384ft",
+    "checkpoint": "raptor_ft_r7coat384ft_f0_swa.pt",
+    "checkpoint_sha256": "7891cf0deb5efbe25f133a8dbcd74bc6e47f894b89ab3ca30b38e983cd3f0ecb",
+    "route": {
+      "Medial Meniscus": 0.3,
+      "Lateral Meniscus": 0.08,
+      "Medial OA": 0.12,
+      "Lateral OA": 0.05,
+      "PF OA": 0.05,
+      "Baker's": 0.3,
+      "Contusion": 0.3
+    },
+    "k_eval": 24,
+    "cap_seconds": 2700,
+    "minimum_remaining_seconds": 2700
+  },
+  "evidence": {
+    "candidate_report": "reports/ADAPTED20V2_SOUP75_R384_ALLPROXY_CANDIDATE_2026-10-22.md",
+    "frontier": "reports/joint_f01_r384_all_route_frontier_2026-10-22.json",
+    "static_audit": "reports/adapted20v2_soup75_r384allproxy_candidate_audit_2026-10-22.json",
+    "cell_replay": "reports/adapted20v2_soup75_r384allproxy_cell_replay_2026-10-22.json",
+    "combined_vs_adapted20_v2": {
+      "raw_gold_min": 0.0005008012820510999,
+      "raw_gold_max": 0.0008203012583017921,
+      "proxy_min": 0.004851309313700036,
+      "proxy_mean": 0.004940845684067645,
+      "bootstrap_ci_lower_min": 0.003986112410774642,
+      "positive_folds": "5/5 on all six surfaces",
+      "target_surface_folds": "210/210 positive",
+      "route_surface_folds": "30/30 positive"
+    },
+    "increment_vs_f01_core_upper": {
+      "raw_gold_min": -3.359412326986444e-06,
+      "raw_gold_max": 0.00010910122644969267,
+      "proxy_min": 0.0017708720719075144,
+      "proxy_mean": 0.0017754911936212665
+    }
+  },
+  "prerequisites": {
+    "soup75_private_dataset_uploaded": true,
+    "r384_private_dataset_uploaded": true,
+    "required_datasets": [
+      "intoxicatinglips/rsna-knee-coatfull-soup75-v1",
+      "intoxicatinglips/knee-guts-leg-r384ft"
+    ]
+  },
+  "risk": "The route maximises proxy and uses both models on seven targets; it gives up part of the raw-Gold floor relative to all_gold. Keep as an aggressive backup only.",
+  "dev_eligible": true,
+  "dev_verification": {
+    "kernel_version": 4,
+    "status": "PASS",
+    "report": "reports/allproxy_v4_dev_verification_2026-10-22.json",
+    "all_children_ok": true,
+    "r384_raw_nonconstant": true,
+    "no_fallback": true
+  },
+  "scoring_submission": {
+    "ref": 57525824,
+    "status": "COMPLETE",
+    "public_score": "0.959",
+    "private_score": "0.945",
+    "kernel_version": 4,
+    "submitted_cst": "2026-10-22T21:13:55+08:00"
+  },
+  "status": "complete; public 0.959; private 0.945; ref 57525824"
+}

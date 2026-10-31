@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "branch": "adapted20v2-soup75-r384joint",
+  "route": {
+    "Medial Meniscus": 0.25,
+    "Lateral Meniscus": 0.03,
+    "Medial OA": 0.12,
+    "Lateral OA": 0.05,
+    "PF OA": 0.05,
+    "Baker's": 0.3,
+    "Contusion": 0.3
+  },
+  "labels": [
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Lateral OA",
+    "PF OA",
+    "Baker's",
+    "Contusion"
+  ],
+  "rows": 3,
+  "changed_cells": 0,
+  "seconds": 0.017209768295288086
+}

@@ -1,0 +1,118 @@
+{
+  "id": "intoxicatinglips/rsna-knee-newtable-a5eff30-r150",
+  "title": "RSNA Knee newtable A5eff30 R150",
+  "notebook_sha256": "2574e3368ae5f2451b80f3edd1023bd8df9461c0b15b3bee6f8b5559a9e0aa82",
+  "metadata_sha256": "1fa1d43e8ebb0836181204db62c56842c5dff9bb94bbc927dbf47bc19a8eac02",
+  "parent": {
+    "kernel": "rsna-knee-newtable-a5eff30-only",
+    "version": 1,
+    "online_score": 0.959,
+    "online_position": "highest among our completed submissions",
+    "notebook_sha256": "b9ac76c07c666ba258fd93e6de921e49377f7bf633eef728fad02ffb5c9cf2b6",
+    "metadata_sha256": "b1a75d6e17f3c5b273491836a41bc335ba64181d8a159ce51089dee1df5bedd7"
+  },
+  "change": "preserve all 21 A5eff30-only cells except cell 18; multiply the twelve OWN_W_PER_TARGET reader weights by 1.50",
+  "changed_cells": [
+    18
+  ],
+  "reader_scale": 1.5,
+  "old_reader_weights": {
+    "Baker's": 0.035,
+    "Contusion": 0.03,
+    "Medial OA": 0.025,
+    "ACL": 0.025,
+    "Medial Meniscus": 0.02,
+    "MCL": 0.02,
+    "Lateral Meniscus": 0.008,
+    "Fracture": 0.008,
+    "Lateral OA": 0.008,
+    "PF OA": 0.008,
+    "Effusion": 0.004,
+    "Synovitis": 0.003
+  },
+  "new_reader_weights": {
+    "Baker's": 0.0525,
+    "Contusion": 0.045,
+    "Medial OA": 0.0375,
+    "ACL": 0.0375,
+    "Medial Meniscus": 0.03,
+    "MCL": 0.03,
+    "Lateral Meniscus": 0.012,
+    "Fracture": 0.012,
+    "Lateral OA": 0.012,
+    "PF OA": 0.012,
+    "Effusion": 0.006,
+    "Synovitis": 0.0045
+  },
+  "a5_residual": {
+    "labels": [
+      "Effusion"
+    ],
+    "dose": 0.3,
+    "cell_unchanged": true
+  },
+  "evidence_vs_a5eff30": {
+    "original_gold_delta": 0.0,
+    "original_proxy_delta": 0.0006643448281332676,
+    "original_positive_folds": 5,
+    "mirror_gold_delta": 0.0,
+    "mirror_proxy_delta": 0.0006706494490763548,
+    "mirror_positive_folds": 5,
+    "gold_negative_columns": [],
+    "proxy_bootstrap_ci_positive": true
+  },
+  "evidence": "R150 was online-positive on another parent; combined migration is locally positive on both deployed A5 surfaces and all folds",
+  "runtime": "no additional model family or forward pass; same 21-cell A5eff30-only execution chain",
+  "audit": "reports/a5eff30_r150_candidate_audit_2026-10-22.json",
+  "static_preflight": "reports/a5eff30_r150_static_preflight_2026-10-22.json",
+  "local_evidence": "reports/a5eff30_r150_2026-10-22.json",
+  "final_decision_record": "reports/FINAL_DELICATE_POSTPROCESS_PLAN_2026-10-22.md",
+  "selection_note": "Uniform R150 retained after per-target tiers failed the Gold ACL gate and Effusion isolation showed no improvement. mm08's 0.959 tie-break result shows that local proxy gains transfer weakly, so R150 remains a same-score-rank challenger.",
+  "dev_eligible": true,
+  "dev_approved": true,
+  "dev_pushed": true,
+  "dev_push": {
+    "kernel": "intoxicatinglips/rsna-knee-newtable-a5eff30-r150",
+    "version": 2,
+    "pushed_at_cst": "2026-10-22T23:14:30+08:00",
+    "url": "https://www.kaggle.com/code/intoxicatinglips/rsna-knee-newtable-a5eff30-r150",
+    "status": "PASS",
+    "verified_at_cst": "2026-10-22T23:34:00+08:00",
+    "remote_output": "remote_outputs/dev_a5eff30_r150_v2_20261022",
+    "verification": {
+      "a5_receipt": "PASS",
+      "a5_effusion_dose": 0.3,
+      "coverage": 1.0,
+      "worker_exits": [
+        0,
+        0
+      ],
+      "submission_rows": 3,
+      "submission_columns": 13,
+      "fallback_studies": 0,
+      "target_changed_in_tiny_dev": false
+    },
+    "previous_attempts": [
+      {
+        "version": 1,
+        "pushed_at_cst": "2026-10-22T23:10:03+08:00",
+        "status": "stuck; user requested repush"
+      }
+    ]
+  },
+  "scoring_submission": {
+    "ref": 57530094,
+    "kernel": "intoxicatinglips/rsna-knee-newtable-a5eff30-r150",
+    "kernel_version": 2,
+    "file": "submission.csv",
+    "submitted_at_utc": "2026-10-22T15:34:34Z",
+    "submitted_at_cst": "2026-10-22T23:34:34+08:00",
+    "status": "COMPLETE",
+    "public_score": "0.959",
+    "private_score": "0.945",
+    "completed_observed_at_cst": "2026-10-31T23:07:36+08:00",
+    "description": "RSNA Knee newtable A5eff30 R150 uniform reader; dev V2 PASS; user approved scoring"
+  },
+  "scoring_submitted": true,
+  "status": "complete; public 0.959; private 0.945; ref 57530094"
+}

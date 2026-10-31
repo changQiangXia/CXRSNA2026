@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "weight": 0.3,
+  "dose_by_label": {
+    "Effusion": 0.3
+  },
+  "labels": [
+    "Effusion"
+  ],
+  "gpus": 2,
+  "worker_exits": [
+    0,
+    0
+  ],
+  "coverage": 1.0,
+  "studies": 3,
+  "changed_cells": 0,
+  "seconds": 37.06722974777222,
+  "assets": "/kaggle/input/datasets/intoxicatinglips/rsna-knee-a5-private-v1",
+  "weights": "/kaggle/input/datasets/mattiaangeli/knee-mri-fold-weights",
+  "data": "/kaggle/input/competitions/rsna-knee-abnormality-detection"
+}

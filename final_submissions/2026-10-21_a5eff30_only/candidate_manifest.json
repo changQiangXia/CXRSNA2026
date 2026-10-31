@@ -1,0 +1,69 @@
+{
+  "id": "intoxicatinglips/rsna-knee-newtable-a5eff30-only",
+  "title": "RSNA Knee newtable A5eff30 only",
+  "notebook_sha256": "b9ac76c07c666ba258fd93e6de921e49377f7bf633eef728fad02ffb5c9cf2b6",
+  "metadata_sha256": "b1a75d6e17f3c5b273491836a41bc335ba64181d8a159ce51089dee1df5bedd7",
+  "source": "kaggle_kernels/rsna-knee-newtable-agree60-fsev5-22",
+  "source_online_anchor": {
+    "kernel": "rsna-knee-newtable-agree60-fsev5-22",
+    "version": 2,
+    "displayed_lb": "0.959",
+    "online_order": "ranked above double+A5 and rpure6-R150 in the same band"
+  },
+  "change": "append one fail-open A5 residual cell; only Effusion at .30; all 20 anchor cells byte-identical",
+  "a5_labels": [
+    "Effusion"
+  ],
+  "a5_weight": 0.3,
+  "a5_column_mapping": "Effusion -> model output index 7",
+  "evidence_vs_anchor": {
+    "original_gold_delta": 0.00031055900621124177,
+    "original_proxy_delta": 0.00036452171999223903,
+    "original_positive_folds": 5,
+    "mirror_gold_delta": 0.0008281573498964967,
+    "mirror_proxy_delta": 0.00045049382376416425,
+    "mirror_positive_folds": 5,
+    "nested_heldout_both_surfaces_5_of_5": true
+  },
+  "online_probe_rationale": "The full reader bundle remained below the anchor online. A5 Effusion is the only added independent-family signal, so it is isolated on the anchor instead of blending the two correlated final submissions.",
+  "audit": "reports/newtable_a5eff30_only_2026-10-21.json",
+  "static_preflight": "reports/newtable_a5eff30_only_static_preflight_2026-10-21.json",
+  "a5safe2_overlay": "not used",
+  "risk": "adds five A5 forwards; fail-open time budget and coverage gate preserve the exact anchor if unavailable or late",
+  "dev_push": {
+    "kernel_ref": "intoxicatinglips/rsna-knee-newtable-a5eff30-only",
+    "kernel_version": 1,
+    "pushed_at_cst": "2026-10-21 19:56:10",
+    "status": "dev PASS",
+    "verification": {
+      "report": "reports/anchor_pair_dev_verification_2026-10-21.json",
+      "receipt_status": "PASS",
+      "formula_replay_max_diff": 0.0,
+      "coverage": 1.0,
+      "fallback_studies": 0,
+      "worker_exits": [0, 0],
+      "final_sha256": "a26e46e222d063264f1115effd2a08d5403a4d41068da904d520662e7e251cfa"
+    },
+    "url": "https://www.kaggle.com/code/intoxicatinglips/rsna-knee-newtable-a5eff30-only"
+  },
+  "scoring_submission": {
+    "status": "COMPLETE",
+    "ref": 57481279,
+    "public_score": "0.959",
+    "private_score": "0.945",
+    "final_public_rank": 182,
+    "kernel_version": 1,
+    "submitted_at_utc": "2026-10-21 12:17:56",
+    "submitted_at_cst": "2026-10-21 20:17:56",
+    "description": "anchor + A5 Effusion only v1: formula replay PASS",
+    "observed_result": {
+      "highest_current_score": true,
+      "system_selected": true,
+      "rank_before": 185,
+      "rank_after": 175,
+      "numeric_public_score": null,
+      "source": "user leaderboard observation"
+    }
+  },
+  "status": "online success; current highest score; rank improved 185 -> 175"
+}

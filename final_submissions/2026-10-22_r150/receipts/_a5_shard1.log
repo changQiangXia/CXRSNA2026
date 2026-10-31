@@ -1,0 +1,11 @@
+A5 strict-loaded m_f0.pt; all encoder and head tensors present
+A5 strict-loaded m_f1.pt; all encoder and head tensors present
+A5 strict-loaded m_f2.pt; all encoder and head tensors present
+A5 strict-loaded m_f3.pt; all encoder and head tensors present
+A5 strict-loaded m_f4.pt; all encoder and head tensors present
+{
+  "out": "/kaggle/working/_a5_shard1.npz",
+  "studies": 1,
+  "applicable": 1,
+  "seconds": 3.552532434463501
+}

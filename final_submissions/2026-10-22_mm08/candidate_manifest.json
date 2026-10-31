@@ -1,0 +1,102 @@
+{
+  "id": "intoxicatinglips/rsna-knee-newtable-a5eff30-coatfull-adapted20-mm08",
+  "title": "RSNA Knee A5eff30 CoAtFull stable11 mm08",
+  "notebook_sha256": "134779bfa1f13ae32f493b9844a17bb45309ee27da7dd8b4690520e082f2ce16",
+  "metadata_sha256": "13773ddcff0fe012d53fea68c277319e8bfd761dabd5fdf60c3d28c6d187f0f8",
+  "source": "kaggle_kernels/rsna-knee-newtable-a5eff30-coatfull-adapted20",
+  "parent_online_anchor": {
+    "kernel": "rsna-knee-newtable-a5eff30-only",
+    "version": 1,
+    "ref": 57481279
+  },
+  "parent_dev_verified": {
+    "kernel": "intoxicatinglips/rsna-knee-newtable-a5eff30-coatfull-adapted20",
+    "version": 1,
+    "status": "dev PASS",
+    "verified_at_cst": "2026-10-22 14:23 CST"
+  },
+  "change": "reuse the exact adapted20 child output; add Medial Meniscus at .08 while retaining stable10 at .20",
+  "coatfull": {
+    "checkpoint": "raptor_ft_coatfull_frz3mild_f0.pt",
+    "checkpoint_sha256": "f1d9e919c8f827cf125be9a59e8b80cd7d8e7bcbade6db8d9de5a6711908dd70",
+    "route": {
+      "Medial Meniscus": 0.08,
+      "ACL": 0.2,
+      "MCL": 0.2,
+      "Lateral Meniscus": 0.2,
+      "Medial OA": 0.2,
+      "Lateral OA": 0.2,
+      "PF OA": 0.2,
+      "Effusion": 0.2,
+      "Synovitis": 0.2,
+      "Baker's": 0.2,
+      "Contusion": 0.2
+    }
+  },
+    "evidence": {
+      "audit": "reports/coatfull_medmen_increment_2026-10-22.json",
+      "pair_mechanism": "reports/coatfull_medmen_pair_mechanism_2026-10-22.json",
+      "raw_smoke": "reports/coatfull_frz3mild_full_gold_2026-10-22.json",
+      "medmen_008_raw_gold_six_surface": 0.00010016025641024218,
+      "medmen_008_proxy_min": 0.00031416359541358574,
+      "medmen_008_proxy_mean": 0.0003180026617526181,
+      "medmen_008_positive_folds": "5/5 on all six surfaces",
+      "pair_net": {
+        "positive_fold_surfaces": "30/30",
+        "surface_net_min": 491,
+        "fold_surface_net_min": 10,
+        "changed_fraction_max": 0.004791154791154792,
+        "gold_net": "1 fixed / 0 broken on all six surfaces"
+      },
+      "first_gold_break": ".12",
+      "runtime": "same child; no additional model forward"
+    },
+  "risk": "hidden transfer of the Medial Meniscus increment is unproven; the child still fail-opens exactly to the A5eff30 anchor",
+  "dev_eligible": true,
+  "dev_approved": "2026-10-22 14:56 CST; user explicitly instructed 交dev",
+  "dev_push": {
+    "kernel_ref": "intoxicatinglips/rsna-knee-a5eff30-coatfull-stable11-mm08",
+    "kernel_version": 1,
+    "pushed_at_cst": "2026-10-22 14:56 CST",
+    "status": "dev PASS",
+    "verified_at_cst": "2026-10-22 15:00 CST",
+    "url": "https://www.kaggle.com/code/intoxicatinglips/rsna-knee-a5eff30-coatfull-stable11-mm08",
+    "push_warning": "Kaggle resolved the display title to this remote kernel slug; metadata id remains the independent candidate id.",
+    "remote_output": "remote_outputs/dev_mm08_v1_20261022",
+    "verification": "remote_outputs/dev_mm08_v1_20261022/stable11_mm08_dev_verification.json",
+    "child_status": {
+      "status": "ok",
+      "rows": 3,
+      "seconds": 30.3
+    },
+    "residual_receipt": {
+      "status": "PASS",
+      "labels": 11,
+      "medial_meniscus_dose": 0.08,
+      "changed_cells_on_tiny_dev": 0
+    },
+    "scoring": "not authorized"
+  },
+  "scoring_submission": {
+    "ref": 57514882,
+    "file_name": "submission.csv",
+    "kernel": "intoxicatinglips/rsna-knee-a5eff30-coatfull-stable11-mm08",
+    "kernel_version": 1,
+    "submitted_at_utc": "2026-10-22 07:16:50 UTC",
+    "submitted_at_cst": "2026-10-22 15:16:50 CST",
+    "status": "COMPLETE",
+    "public_score": "0.959",
+    "private_score": "0.945",
+    "observed_at_cst": "2026-10-22 23:11:40 CST",
+    "observed_result": {
+      "system_selected": true,
+      "replaced": "intoxicatinglips/rsna-knee-newtable-a5eff20-only Version 1",
+      "order_vs_a5eff30_only": "lower",
+      "order_vs_a5eff20_only": "higher",
+      "current_portfolio_position": 2
+    },
+    "description": "A5eff30 + CoATFull stable11 mm08; dev PASS",
+    "polling": "none; user monitors scoring"
+  },
+  "status": "online success; public 0.959; private 0.945; current second selected submission"
+}
