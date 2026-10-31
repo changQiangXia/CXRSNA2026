@@ -12,7 +12,7 @@
 
 ## Data shape
 
-From the most detailed public write-ups and the team inventory:
+From the most detailed public write-ups and the solo inventory:
 
 ```text
 train studies             4,407

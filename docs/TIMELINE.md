@@ -5,13 +5,13 @@ All dates are Beijing time unless a source explicitly says otherwise.
 ## 2026-10-04 — First usable public stack
 
 The first valid archive point was around **0.943**, built by combining public
-strong models and the team’s rank post-processing. The initial lesson was that
+strong models and the solo entry’s rank post-processing. The initial lesson was that
 the competition was already an ecosystem problem: copying a strong public
 notebook without understanding its blend path was not enough.
 
 ## 2026-10-05–10-08 — Fast public-model climb
 
-The team moved through roughly:
+The solo entry moved through roughly:
 
 ```text
 0.943 -> 0.945 -> 0.949 -> 0.950
@@ -39,7 +39,7 @@ A particularly important result was the R-slot experiment:
 public parent -> replace part of the Raptor slot with soup5 -> about 0.957
 ```
 
-This was one of the few clean online A/B results. The team learned that a
+This was one of the few clean online A/B results. The solo entry learned that a
 self-trained leg can be useful when it is geometrically aligned and blended at
 a controlled weight; the same idea failed when checkpoint geometry differed.
 
@@ -51,12 +51,12 @@ large rank-order improvement and established the design principle:
 > a new, partially independent information source is more valuable than
 > repeatedly tuning a correlated member.
 
-The team also began using agreement gates and rank bands, but later discovered
+The solo entry also began using agreement gates and rank bands, but later discovered
 that flexible target-specific gates often overfit the 58-study panel.
 
 ## 2026-10-17–10-19 — Public ecosystem maturity
 
-The working score reached **0.958**, then **0.959**. The team invested in:
+The working score reached **0.958**, then **0.959**. The solo entry invested in:
 
 - reader dose and per-finding weighting;
 - study-severity overlays;
@@ -95,7 +95,7 @@ more target columns were rejected or failed nested checks.
 
 ## 2026-10-22 — Endgame and runtime variance
 
-The team tested several final challengers:
+The solo entry tested several final challengers:
 
 | Candidate | Result |
 |---|---|

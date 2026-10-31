@@ -2,7 +2,8 @@
 
 > 本 README 同时提供中文和英文版本。中文在前，英文在后。
 
-这是一个面向赛后的完整归档，记录 `intoxicatinglips` / **CHEN Xiang** 团队参加
+这是一个面向赛后的完整归档，记录 `intoxicatinglips` / **CHEN Xiang** 以 solo
+身份参加
 [RSNA Knee Abnormality Detection 2026](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection)
 的全过程。
 
@@ -139,9 +140,15 @@ residual `.30`；更高剂量、更多目标列或更大的 residual bundle 都�
 
 ## 复现与私有资产
 
-notebook 会引用公开 Kaggle 数据集和少量团队私有 artifact；这些 artifact
+notebook 会引用公开 Kaggle 数据集和少量我的私有 artifact；这些 artifact
 不会在本仓库中重新分发。复现者必须自行准备合法获得的比赛数据、公开权重和
 有权限使用的私有资产。
+
+本次比赛是 **solo 赛**；文中提到其他 team 的地方，均是在引用公开强者的
+外部方案，不代表我方有团队合并。
+
+本次 notebook 实际引用的私有 Kaggle datasets 及链接见
+[`docs/PRIVATE_ASSETS.md`](docs/PRIVATE_ASSETS.md)。
 
 归因见 [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md)，共享边界见
 [`NOTICE.md`](NOTICE.md)。
@@ -150,7 +157,7 @@ notebook 会引用公开 Kaggle 数据集和少量团队私有 artifact；这些
 
 # RSNA Knee Abnormality Detection 2026 — Complete Archive (English)
 
-This repository is a detailed, post-competition archive of team
+This repository is a detailed, post-competition archive of the solo entry
 `intoxicatinglips` / **CHEN Xiang** in the
 [RSNA Knee Abnormality Detection 2026](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection)
 code competition.
@@ -205,7 +212,7 @@ and anatomy-aware inputs produced more gain than fashionable model changes**.
 
 ## Our path
 
-The team started from the public code ecosystem and improved in short,
+The solo entry started from the public code ecosystem and improved in short,
 evidence-gated steps:
 
 ```text
@@ -314,9 +321,15 @@ Kaggle reported a notebook timeout and no score.
 ## Reproducibility and private assets
 
 The notebooks reference public Kaggle datasets and a small number of private
-artifacts used by the team. Those artifacts are not redistributed here. A reader
+artifacts used by the solo entry. Those artifacts are not redistributed here. A reader
 must attach their own legally obtained competition data, public weights, and
 eligible private artifacts before rerunning a notebook.
 
 See [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md) for attribution and
 [`NOTICE.md`](NOTICE.md) for the archive’s legal and sharing boundary.
+
+This was a solo competition. References to other teams in the public-intel
+section describe external write-ups, not a team merge on our side.
+
+The private Kaggle datasets referenced by the archived notebooks, with direct
+links, are listed in [`docs/PRIVATE_ASSETS.md`](docs/PRIVATE_ASSETS.md).

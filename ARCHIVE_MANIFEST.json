@@ -381,5 +381,33 @@
     "checkpoints",
     "Kaggle credentials",
     "large notebook outputs"
+  ],
+  "participation": "solo",
+  "private_dataset_links": [
+    {
+      "ref": "intoxicatinglips/rsna-knee-a5-private-v1",
+      "url": "https://www.kaggle.com/datasets/intoxicatinglips/rsna-knee-a5-private-v1",
+      "usage": "A5 worker/assets"
+    },
+    {
+      "ref": "intoxicatinglips/knee-guts-leg-rob5",
+      "url": "https://www.kaggle.com/datasets/intoxicatinglips/knee-guts-leg-rob5",
+      "usage": "R-slot/ensemble notebooks"
+    },
+    {
+      "ref": "intoxicatinglips/rsna-knee-coatfull-ft-v1",
+      "url": "https://www.kaggle.com/datasets/intoxicatinglips/rsna-knee-coatfull-ft-v1",
+      "usage": "mm08 and allgold/allproxy"
+    },
+    {
+      "ref": "intoxicatinglips/rsna-knee-coatfull-soup75-v1",
+      "url": "https://www.kaggle.com/datasets/intoxicatinglips/rsna-knee-coatfull-soup75-v1",
+      "usage": "allgold/allproxy"
+    },
+    {
+      "ref": "intoxicatinglips/knee-guts-leg-r384ft",
+      "url": "https://www.kaggle.com/datasets/intoxicatinglips/knee-guts-leg-r384ft",
+      "usage": "allgold/allproxy"
+    }
   ]
 }
