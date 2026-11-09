@@ -119,6 +119,7 @@ public rank    182
 private score  0.945
 ```
 
-The archive includes the complete final-wave scoring candidates and the
-experiment ledger so the gap between displayed public score, private score, and
-local proxy can be audited directly.
+The archive includes source and metadata for all six completed final-wave
+scoring candidates, the Baker12 timeout record, and the experiment ledger. The
+gap between displayed public score, private score, and local proxy can be
+traced through the preserved manifests, receipts, and time-stamped reports.

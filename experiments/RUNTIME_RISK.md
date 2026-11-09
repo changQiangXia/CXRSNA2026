@@ -1,5 +1,8 @@
 # Baker12 timeout and current runtime risk
 
+> 历史快照：文中的“当前”、`PENDING`、未提交等状态仅对应文首时间。
+> 终盘状态见 [`final_submissions/README.md`](../final_submissions/README.md)。
+
 **北京时间：2026-10-22 22:25 CST**
 
 ## 事实

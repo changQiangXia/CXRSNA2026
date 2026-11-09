@@ -1,5 +1,8 @@
 # Top Public Write-Ups: Technical Summary
 
+Scores in this file are the scores reported by each write-up author. They are
+not a substitute for a fresh leaderboard query or an independent reproduction.
+
 All links are from the competition discussion forum. The original text belongs
 to its authors; this file is a technical summary and a reading guide.
 

@@ -8,9 +8,11 @@ three kinds of evidence:
 2. **Solution write-ups** authored by competitors after the event.
 3. **Mechanism summaries** written by this archive, with links to originals.
 
-We do not reproduce full third-party posts here. The originals remain on Kaggle;
+Full third-party posts are not reproduced here. The originals remain on Kaggle;
 the summaries preserve the technical claims and the failure conditions that
-matter for future competitions.
+matter for future competitions. Numerical claims quoted from write-ups are
+author-reported, time-sensitive claims rather than fresh leaderboard results or
+independent reproductions.
 
 Files:
 

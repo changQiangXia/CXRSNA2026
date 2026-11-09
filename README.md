@@ -1,15 +1,15 @@
-# RSNA Knee Abnormality Detection 2026 — 赛后完整归档
+# RSNA Knee Abnormality Detection 2026 — 赛后复盘归档
 
 > 本 README 同时提供中文和英文版本。中文在前，英文在后。
 
-这是一个面向赛后的完整归档，记录 `intoxicatinglips` / **CHEN Xiang** 以 solo
+这是一个面向赛后的复盘与决策归档，记录 `intoxicatinglips` / **CHEN Xiang** 以 solo
 身份参加
 [RSNA Knee Abnormality Detection 2026](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection)
 的全过程。
 
 仓库包含：
 
-- 完整实验历史与决策台账；
+- 按时间整理的实验台账与决策记录；
 - 终盘提交 notebook、candidate manifest 和 dev 回执；
 - 公开/私有分数、提交 ref 和系统选中记录；
 - 公开区高排名 write-up 的技术摘要与原文链接；
@@ -19,6 +19,22 @@
 原始 DICOM、竞赛标签、私有 checkpoint、Kaggle token 和大体积 notebook 输出
 不会进入本仓库。
 
+## 建议阅读顺序
+
+直接 clone 后，可以先按以下顺序建立完整上下文：
+
+1. 本 README，确认最终成绩、范围与关键结论；
+2. [`docs/COMPLETENESS.md`](docs/COMPLETENESS.md)，确认 clone 能恢复什么、
+   不能恢复什么；
+3. [`final_submissions/README.md`](final_submissions/README.md)，以六个有效
+   终盘提交和 Baker12 超时记录为准；
+4. [`docs/COMPETITION.md`](docs/COMPETITION.md) 与
+   [`docs/TIMELINE.md`](docs/TIMELINE.md)，建立赛题和迭代时间线；
+5. [`experiments/README.md`](experiments/README.md)，再进入实验台账和带时间戳的
+   历史报告；
+6. [`public_intel/`](public_intel/README.md) 与
+   [`docs/LESSONS.md`](docs/LESSONS.md)，阅读外部证据、迁移分析和可复用经验。
+
 ## 最终成绩
 
 | 项目 | 数值 |
@@ -27,9 +43,12 @@
 | Private leaderboard | **0.945** |
 | Public rank snapshot | **182 / 6,425** |
 | 使用提交数 | 94 |
-| 归档时间 | 2026-10-31 UTC |
+| Leaderboard 快照时间 | 2026-10-31 UTC |
+| 文档复核时间 | 2026-11-09 UTC |
 
 公榜只显示三位小数。很多终盘候选都显示 `0.959`，但全精度排序并不相同。
+六个终盘提交的隐藏集全精度数值，以及 Kaggle 最终内部选择所依据的精确排序，
+未保存在本仓库中；本仓库保留的是显示分、提交 ref 和当时观察到的系统选中顺序。
 
 ## 这场比赛真正难在哪里
 
@@ -50,8 +69,8 @@ ACL、MCL、内侧半月板、外侧半月板、
 3. 把 9 小时 hidden rerun 的耗时和 fail-open 设计进模型；
 4. 只做有机制、可解释、逐目标的后处理。
 
-所有高分公开方案都指向同一个结论：**标签和 anatomy-aware inputs 的收益，
-远大于盲目更换时髦模型。**
+本仓库研究的高分公开 write-up 普遍指向同一个结论：**标签和 anatomy-aware
+inputs 的收益，远大于盲目更换时髦模型。**
 
 ## 爬升路径
 
@@ -117,7 +136,12 @@ residual `.30`；更高剂量、更多目标列或更大的 residual bundle 都�
 
 ## 最终 scoring wave
 
-所有终盘候选完整保存在 [`final_submissions/`](final_submissions/README.md)。
+六个有效终盘候选的源码、manifest 与回执保存在
+[`final_submissions/`](final_submissions/README.md)；Baker12 超时记录同页保留。
+机器可读汇总见
+[`results/final_submission_receipts.csv`](results/final_submission_receipts.csv)，
+公榜快照见
+[`results/public_leaderboard_2026-10-31.csv`](results/public_leaderboard_2026-10-31.csv)。
 
 | Submission | Ref | Public | Private | 作用 |
 |---|---:|---:|---:|---|
@@ -138,7 +162,11 @@ residual `.30`；更高剂量、更多目标列或更大的 residual bundle 都�
 
 - [`docs/COMPETITION.md`](docs/COMPETITION.md)：比赛卡片、指标、数据规模、
   leaderboard 和证据边界。
+- [`docs/COMPLETENESS.md`](docs/COMPLETENESS.md)：直接 clone 后能还原什么、
+  哪些原始资产和中间工件被刻意排除。
 - [`docs/TIMELINE.md`](docs/TIMELINE.md)：按时间排列的探索历程。
+- [`experiments/README.md`](experiments/README.md)：实验归档的阅读方式、
+  历史快照状态和复现边界。
 - [`experiments/EXPERIMENT_LEDGER.csv`](experiments/EXPERIMENT_LEDGER.csv)：
   原始详细实验台账。
 - [`experiments/FINAL_DECISION.md`](experiments/FINAL_DECISION.md)：最后的后处理
@@ -150,6 +178,10 @@ residual `.30`；更高剂量、更多目标列或更大的 residual bundle 都�
 - [`docs/LESSONS.md`](docs/LESSONS.md)：下一场比赛应该怎么做。
 - [`final_submissions/`](final_submissions/README.md)：最终 notebook、manifest、
   dev 回执和 scoring ref。
+- [`results/final_submission_receipts.csv`](results/final_submission_receipts.csv)：
+  终盘提交与 Baker12 超时的一行式汇总。
+- [`results/public_leaderboard_2026-10-31.csv`](results/public_leaderboard_2026-10-31.csv)：
+  赛后公榜快照，用于复核名次和邻近分数。
 
 ## 正确理解这个结果
 
@@ -176,16 +208,16 @@ notebook 会引用公开 Kaggle 数据集和少量私有 artifact；这些 artif
 
 ---
 
-# RSNA Knee Abnormality Detection 2026 — Complete Archive (English)
+# RSNA Knee Abnormality Detection 2026 — Competition Retrospective Archive
 
-This repository is a detailed, post-competition archive of the solo entry
+This repository is a retrospective and decision archive of the solo entry
 `intoxicatinglips` / **CHEN Xiang** in the
 [RSNA Knee Abnormality Detection 2026](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection)
 code competition.
 
 The repository contains:
 
-- the full experiment history and decision ledger;
+- the chronological experiment ledger and decision record;
 - the final-wave submission notebooks and candidate manifests;
 - dev receipts, scoring references, and public/private scores;
 - summaries of the most useful public write-ups and discussions;
@@ -195,6 +227,24 @@ The repository contains:
 Raw DICOM data, competition labels, private checkpoints, Kaggle credentials,
 and large notebook outputs are intentionally not included.
 
+## Recommended reading order
+
+After cloning, use this sequence to establish the full context:
+
+1. this README for the result, scope, and headline conclusions;
+2. [`docs/COMPLETENESS.md`](docs/COMPLETENESS.md) for what the clone can and
+   cannot reconstruct;
+3. [`final_submissions/README.md`](final_submissions/README.md) for the six
+   scored endgame candidates and the Baker12 timeout record;
+4. [`docs/COMPETITION.md`](docs/COMPETITION.md) and
+   [`docs/TIMELINE.md`](docs/TIMELINE.md) for the competition model and
+   chronology;
+5. [`experiments/README.md`](experiments/README.md) before reading the ledger
+   and time-stamped working reports;
+6. [`public_intel/`](public_intel/README.md) and
+   [`docs/LESSONS.md`](docs/LESSONS.md) for external evidence, transfer
+   analysis, and reusable lessons.
+
 ## Final result
 
 | Field | Value |
@@ -203,10 +253,15 @@ and large notebook outputs are intentionally not included.
 | Private leaderboard | **0.945** |
 | Public rank snapshot | **182 / 6,425** |
 | Submissions used | 94 |
-| Final archive prepared | 2026-10-31 UTC |
+| Leaderboard snapshot | 2026-10-31 UTC |
+| Documentation review | 2026-11-09 UTC |
 
 The leaderboard displays only three decimals. Many different final candidates
 therefore displayed `0.959` while differing at a finer, invisible precision.
+The full-precision hidden scores for the six final candidates, and the exact
+internal ordering behind Kaggle's final selection, are not preserved in this
+archive. The archive preserves displayed scores, submission references, and the
+observed system-selection order.
 
 ## What this competition really was
 
@@ -228,8 +283,9 @@ The central problem required:
 3. control runtime and failure modes in a nine-hour rerun;
 4. make small, target-specific post-processing changes.
 
-The strongest public solutions all converged on the same conclusion: **labels
-and anatomy-aware inputs produced more gain than fashionable model changes**.
+The high-scoring public write-ups reviewed in this archive repeatedly point to
+the same conclusion: **labels and anatomy-aware inputs produced more gain than
+fashionable model changes**.
 
 ## Path
 
@@ -256,17 +312,17 @@ residual bundles repeatedly failed local or hidden checks.
 ## Innovation tricks
 
 The main contribution operated in rank space. The 12 AUC columns were treated as
-12 independent ranking problems with small, auditable changes
-with reversible fallbacks.
+12 independent ranking problems using small, auditable changes and reversible
+fallbacks.
 
 - **Single-column A5 residual:** a fixed `.30` rank residual was applied only
   on Effusion while retaining the strong host. The A5
   reader is weak alone but partially decorrelated from the host, so a small
   correction can repair host ranking mistakes.
-- **Per-finding rank post-processing:** AUC is
-  invariant to probability calibration, so per-finding rank residuals,
-  reader weights and fixed doses. We rejected isotonic calibration, probability
-  offsets and learned cross-label stackers.
+- **Per-finding rank post-processing:** AUC is invariant to probability
+  calibration, so the implementation used per-finding rank residuals, reader
+  weights, and fixed doses. Isotonic calibration, probability offsets, and
+  learned cross-label stackers were rejected.
 - **Rank-band and consensus routing:** changes were restricted to the middle
   rank band and to studies where reader families agreed, preserving extreme
   predictions and treating disagreement as uncertainty.
@@ -277,9 +333,9 @@ with reversible fallbacks.
   failed, the prior anchor submission was restored byte-for-byte. Final
   candidates favored combinations that remained valid when a child was absent.
 - **Runtime was part of model selection:** every stage had a deadline, skip
-  policy and a 30-minute submission margin. We preferred losing an optional
-  child over letting a hidden I/O fluctuation turn the whole notebook into a
-  timeout.
+  policy and a 30-minute submission margin. The design favored losing an
+  optional child over letting a hidden I/O fluctuation turn the whole notebook
+  into a timeout.
 - **Fixed evidence gates, no public-leaderboard tuning:** doses, gates and
   blend weights were frozen before hidden scoring. The 58-gold panel, 870
   proxy, five folds and actual leaderboard receipts had explicit, separate
@@ -291,10 +347,10 @@ choosing which column and which small part of the ranking deserved surgery.
 
 ## Lessons and takeaways
 
-- **Supervision quality sets the ceiling.** The strongest public solutions
-  repeatedly constructed continuous soft labels from reports and images. The
-  58 expert studies served as a definition gate; fine-grained weight searches
-  needed broader evidence.
+- **Supervision quality sets the ceiling.** The high-scoring public write-ups
+  reviewed here repeatedly constructed continuous soft labels from reports and
+  images. The 58 expert studies served as a definition gate; fine-grained
+  weight searches needed broader evidence.
 - **Anatomy is a high-value investment.** Physical geometry, side
   normalization, knee-centred crops, bone landmarks, compartment crops, and
   ROI/lesion supervision recurred across winners and addressed a real
@@ -324,8 +380,13 @@ for the cross-solution evidence and failure conditions.
 
 ## Final scoring wave
 
-Every final-wave candidate is preserved under
-[`final_submissions/`](final_submissions/README.md).
+All six scored final-wave candidates are preserved under
+[`final_submissions/`](final_submissions/README.md). The separate Baker12
+timeout record is retained on the same page.
+Machine-readable summaries are available in
+[`results/final_submission_receipts.csv`](results/final_submission_receipts.csv)
+and the public-board snapshot is in
+[`results/public_leaderboard_2026-10-31.csv`](results/public_leaderboard_2026-10-31.csv).
 
 | Submission | Ref | Public | Private | Role |
 |---|---:|---:|---:|---|
@@ -337,8 +398,8 @@ Every final-wave candidate is preserved under
 | `R150 V2` | 57530094 | 0.959 | 0.945 | final reader-scale candidate |
 
 The last two scoring submissions by time were `allgold` and `R150`; because
-several submissions were nearly simultaneous, the whole final wave is archived,
-removing any ambiguity about which two a reader might mean.
+several submissions were nearly simultaneous, all six scored snapshots are
+retained, removing any ambiguity about which two a reader might mean.
 
 `A5eff30 + Baker12` (`ref 57509367`) is retained as a documented failure:
 Kaggle reported a notebook timeout and no score.
@@ -347,7 +408,11 @@ Kaggle reported a notebook timeout and no score.
 
 - [`docs/COMPETITION.md`](docs/COMPETITION.md): competition card, metric,
   data shape, leaderboard, and interpretation boundaries.
+- [`docs/COMPLETENESS.md`](docs/COMPLETENESS.md): what a fresh clone can
+  reconstruct, and which raw/intermediate artifacts are intentionally omitted.
 - [`docs/TIMELINE.md`](docs/TIMELINE.md): chronological exploration history.
+- [`experiments/README.md`](experiments/README.md): how to read the experiment
+  archive, historical status caveats, and reproducibility boundary.
 - [`experiments/EXPERIMENT_LEDGER.csv`](experiments/EXPERIMENT_LEDGER.csv):
   the original detailed experiment ledger.
 - [`experiments/FINAL_DECISION.md`](experiments/FINAL_DECISION.md): the final
@@ -360,6 +425,10 @@ Kaggle reported a notebook timeout and no score.
 - [`docs/LESSONS.md`](docs/LESSONS.md): what to do differently next time.
 - [`final_submissions/`](final_submissions/README.md): final notebooks,
   manifests, dev receipts, and scoring references.
+- [`results/final_submission_receipts.csv`](results/final_submission_receipts.csv):
+  one-row summaries for the six scored candidates and the Baker12 timeout.
+- [`results/public_leaderboard_2026-10-31.csv`](results/public_leaderboard_2026-10-31.csv):
+  the post-competition public-board snapshot used for rank checks.
 
 ## Reading the result correctly
 
@@ -374,9 +443,9 @@ Kaggle reported a notebook timeout and no score.
 ## Reproducibility and private assets
 
 The notebooks reference public Kaggle datasets and a small number of private
-artifacts used by the solo entry. Those artifacts are not redistributed here. A reader
-must attach their own legally obtained competition data, public weights, and
-eligible private artifacts before rerunning a notebook.
+artifacts used by the solo entry. Those artifacts are not redistributed here.
+A reader must attach their own legally obtained competition data, public
+weights, and eligible private artifacts before rerunning a notebook.
 
 See [`docs/ATTRIBUTIONS.md`](docs/ATTRIBUTIONS.md) for attribution and
 [`NOTICE.md`](NOTICE.md) for the archive’s legal and sharing boundary.

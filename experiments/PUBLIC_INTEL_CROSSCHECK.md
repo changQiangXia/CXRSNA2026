@@ -1,5 +1,8 @@
 # NVIDIA skill 本地缓存交叉审计
 
+> 历史快照：文中的“当前”、`PENDING`、未提交等状态仅对应文首时间。
+> 终盘状态见 [`final_submissions/README.md`](../final_submissions/README.md)。
+
 **北京时间：2026-10-22 12:59 CST**
 
 ## 范围

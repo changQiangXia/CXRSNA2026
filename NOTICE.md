@@ -9,11 +9,12 @@ It does **not** contain:
 - private Kaggle credentials or API tokens;
 - large notebook outputs, caches, or local experiment directories.
 
-Some final notebooks reference public Kaggle datasets and team-private artifact
-handles. Attaching or redistributing those artifacts is subject to the original
-competition rules, dataset licenses, and the terms under which third-party
-weights were published.
+This was a solo entry. Some final notebooks reference public Kaggle datasets and
+account-private artifact handles. Attaching or redistributing those artifacts
+is subject to the original competition rules, dataset licenses, and the terms
+under which third-party weights were published.
 
 Third-party write-ups are summarized and linked, not reproduced wholesale.
-Always consult the original Kaggle pages and their authors’ attribution and
-license terms.
+The repository does not relicense third-party code, weights, data, or
+write-ups. Always consult the original Kaggle pages and their authors’
+attribution and license terms.

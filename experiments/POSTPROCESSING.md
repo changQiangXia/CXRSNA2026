@@ -1,5 +1,8 @@
 # Skill 后处理经验映射与终盘冻结
 
+> 历史快照：文中的“当前”、`PENDING`、未提交等状态仅对应文首时间。
+> 终盘状态见 [`final_submissions/README.md`](../final_submissions/README.md)。
+
 **北京时间：2026-10-22 12:53 CST**
 
 ## 结论先行

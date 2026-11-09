@@ -1,5 +1,8 @@
 # CV 赛后 write-up 与图证：我们关心的三条到底是哪来的
 
+> 历史快照：文中的“当前”、`PENDING`、未提交等状态仅对应文首时间。
+> 终盘状态见 [`final_submissions/README.md`](../final_submissions/README.md)。
+
 **拉取日期**：2026-10-06（北京时间凌晨）｜**来源**：Kaggle 讨论区原文（`forums topics`）+ KStarter 仓库归档图
 **本地位置**：
 - 深读原文：`assets/kstarter_docs/rsna-202{2-cervical,4-lumbar}*.md`

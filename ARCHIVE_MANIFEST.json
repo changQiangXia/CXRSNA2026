@@ -2,7 +2,25 @@
   "archive": "CXRSNA2026",
   "competition": "rsna-knee-abnormality-detection",
   "created_utc": "2026-10-31T07:10:34.956501+00:00",
-  "repository_files_note": "Raw data, private weights, credentials and large caches are excluded.",
+  "documentation_reviewed_utc": "2026-11-09",
+  "scope": {
+    "kind": "curated retrospective source and decision archive",
+    "document": "docs/COMPLETENESS.md",
+    "final_status_authority": "final_submissions/README.md",
+    "reading_order": [
+      "README.md",
+      "docs/COMPLETENESS.md",
+      "final_submissions/README.md",
+      "docs/COMPETITION.md",
+      "docs/TIMELINE.md",
+      "experiments/README.md",
+      "public_intel/README.md",
+      "docs/LESSONS.md"
+    ],
+    "historical_reports_are_snapshots": true,
+    "exact_hidden_full_precision_scores_available": false
+  },
+  "repository_files_note": "Raw data, private weights, credentials and large caches are excluded. Historical reports retain their original timestamped status and local artifact references.",
   "final_wave": [
     {
       "directory": "final_submissions/2026-10-21_a5eff20_only",
